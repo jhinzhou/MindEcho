@@ -6,6 +6,7 @@
   <img src="https://github.com/jhinzhou/MindEcho-UI/actions/workflows/main.yml/badge.svg?branch=master" alt="CI" style="max-width: 100%;">
   </a>
 </p>
+
 ## Features
 - ⚡️ Vue 3, Vite 2, pnpm, ESBuild - born with fastness
 - 🦾 TypeScript, of course
