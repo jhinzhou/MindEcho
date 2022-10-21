@@ -14,7 +14,7 @@ hero:
       link: /guide/
     - theme: alt
       text: GitHub
-      link: https://github.com/isolcat/smarty-ui-vite
+      link: https://github.com/jhinzhou/MindEcho-UI
 
 features:
   - icon: ⚡️

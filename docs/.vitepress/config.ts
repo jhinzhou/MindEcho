@@ -18,7 +18,7 @@ export default defineConfig({
         siteTitle: 'MindEcho-UI',
         socialLinks: [
             {
-                icon: 'github', link: 'https://github.com/isolcat'
+                icon: 'github', link: 'https://github.com/jhinzhou/MindEcho-UI'
             }
         ],
         nav: [
