@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./app.a444933b.js";const i=JSON.parse('{"title":"\u53CD\u9988\u9875\u9762","description":"","frontmatter":{"title":"\u53CD\u9988\u9875\u9762"},"headers":[],"relativePath":"feedback.md"}'),c={name:"feedback.md"};function r(o,s,n,d,p,_){return a(),t("div")}const m=e(c,[["render",r]]);export{i as __pageData,m as default};
