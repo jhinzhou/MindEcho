@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
-    "homepage": "https://mindecho-ui-jhinzhou.vercel.app/",
+    "homepage": "https://jhinzhou.github.io/MindEcho-UI/",
     "scripts": {
         "test": "vitest",
         "build": "vite build",
