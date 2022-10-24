@@ -23,7 +23,7 @@ specifiers:
   terser: 5.15.1
   unocss: 0.45.30
   vite: 3.1.8
-  vitepress: 1.0.0-alpha.22
+  vitepress: 1.0.0-alpha.10
   vitepress-theme-demoblock: 1.4.2
   vitest: 0.21.1
   vue: 3.2.41
@@ -54,7 +54,7 @@ devDependencies:
   terser: 5.15.1
   unocss: 0.45.30_vite@3.1.8
   vite: 3.1.8_terser@5.15.1
-  vitepress: 1.0.0-alpha.22_yz3n6hkkhiwxjmxx5ivkadwhle
+  vitepress: 1.0.0-alpha.10_yz3n6hkkhiwxjmxx5ivkadwhle
   vitepress-theme-demoblock: 1.4.2_wcqkhtmu7mswc6yz4uyexck3ty
   vitest: 0.21.1_jdd53kj76tknpzqvkixmb5v56i
 
@@ -4629,8 +4629,8 @@ packages:
       - supports-color
     dev: true
 
-  /vitepress/1.0.0-alpha.22_yz3n6hkkhiwxjmxx5ivkadwhle:
-    resolution: {integrity: sha512-IWqnAxMDNaiyl6Bz+/79l40Ho6xsjrqxRp/WZw0+5BXR0BTZbmHyhGtI3XrH6oSn8MisLPjCccikaj3mcmCoWg==}
+  /vitepress/1.0.0-alpha.10_yz3n6hkkhiwxjmxx5ivkadwhle:
+    resolution: {integrity: sha512-RGPU+YApj2jaYplAIJUe+2qlDks9FzPX1QGK+7NdGByeCCVZg6z9eYWjjvfvA/sgCtG3yeJE/4/jCwlv4Y8bVw==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.2.2

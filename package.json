@@ -5,7 +5,6 @@
     "main": "index.js",
     "homepage": "https://jhinzhou.github.io/MindEcho-UI/",
     "scripts": {
-        "test": "vitest",
         "build": "vite build",
         "dev": "vite",
         "docs:dev": "vitepress dev docs",
@@ -13,7 +12,8 @@
         "docs:serve": "vitepress serve docs",
         "lint": "eslint --fix --ext .ts,.vue src",
         "format": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\"",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "test": "vitest"
     },
     "keywords": [],
     "author": "ZhouJin",
@@ -38,7 +38,7 @@
         "terser": "5.15.1",
         "unocss": "0.45.30",
         "vite": "3.1.8",
-        "vitepress": "1.0.0-alpha.22",
+        "vitepress": "1.0.0-alpha.10",
         "vitepress-theme-demoblock": "1.4.2",
         "vitest": "0.21.1"
     },
