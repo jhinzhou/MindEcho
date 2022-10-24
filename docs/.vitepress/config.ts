@@ -13,8 +13,9 @@ const guideSidebar = [
 
 export default defineConfig({
     title: 'MindEcho-UI',
+    description: 'Just playing around.',
     themeConfig: {
-        logo: '/logo.png',
+        logo: '/logo2.png',
         siteTitle: 'MindEcho-UI',
         socialLinks: [
             {

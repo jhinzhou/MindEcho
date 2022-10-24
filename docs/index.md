@@ -6,7 +6,7 @@ hero:
   text: 一个 Vue3 组件库
   tagline: 
   image:
-    src: /logo.png
+    src: /logo2.png
     alt: VitePress
   actions:
     - theme: brand
