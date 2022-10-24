@@ -11,7 +11,6 @@
   <img src="https://github.com/jhinzhou/MindEcho-UI/actions/workflows/main.yml/badge.svg?branch=master" alt="CI" style="max-width: 100%;">
   </a>
 </p>
-![MIT](https://img.shields.io/conda/l/zhoujin/mindecho-ui)
 
 ## Features
 - ⚡️ Vue 3, Vite 2, pnpm, ESBuild, Vitepress
