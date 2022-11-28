@@ -4,7 +4,7 @@
 <h1 align="center">MindEcho-UI</h1>
 
 <p align="center">
-一个VUE3 组件库
+一个VUE3 组件库🧐
 </p>
 <p align="center">
   <a href="https://github.com/jhinzhou/MindEcho-UI/actions/workflows/main.yml">
