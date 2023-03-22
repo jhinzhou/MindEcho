@@ -31,6 +31,7 @@ export default defineConfig({
         ],
         nav: [
             { text: '首页', link: '/' },
+            { text: '杂记', link: '/remind/index', activeMatch: "/remind/"  },
             { text: '快速开始', link: "/guide/index", activeMatch: "/guide/" }
         ],
         sidebar: [

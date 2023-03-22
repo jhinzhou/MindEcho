@@ -37,15 +37,16 @@
         "prettier": "^2.7.1",
         "terser": "5.15.1",
         "unocss": "0.45.30",
-        "vite": "3.1.8",
-        "vitepress": "1.0.0-alpha.10",
+        "vite": "4.2.0",
+        "vitepress": "1.0.0-alpha.60",
         "vitepress-theme-demoblock": "1.4.2",
-        "vitest": "0.21.1"
+        "vitest": "0.21.1",
+        "vue-router": "^4.1.6"
     },
     "dependencies": {
         "@commitlint/cli": "17.0.2",
         "@commitlint/config-conventional": "17.0.2",
         "@unocss/vite": "^0.45.13",
-        "vue": "3.2.41"
+        "vue": "3.2.47"
     }
 }
