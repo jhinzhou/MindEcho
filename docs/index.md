@@ -2,9 +2,9 @@
 layout: home
 
 hero:
-  name: MindEcho-UI
-  text: 一个 Vue3 组件库
-  tagline: 
+  name: MindEcho
+  text: 一个 CSS 动画库
+  tagline:
   image:
     src: /logo2.png
     alt: VitePress
@@ -18,8 +18,8 @@ hero:
 
 features:
   - icon: ⚡️
-    title: Vite
-    details: 一个字，快
+    title: CSS
+    details: 简单的 CSS 展示炫酷的动画
   - icon: 🖖
     title: Power of Vue meets Markdown
     details: 详细的文档支持
