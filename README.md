@@ -4,7 +4,7 @@
 <h1 align="center">MindEcho-UI</h1>
 
 <p align="center">
-一个VUE3 组件库🧐
+一个基于 VUE3,VITE,VITEPRESS 的 CSS 动画库（保不齐后期支持 vue 组件库）🧐
 </p>
 <p align="center">
   <a href="https://github.com/jhinzhou/MindEcho-UI/actions/workflows/main.yml">
@@ -12,16 +12,10 @@
   </a>
 </p>
 
-## Features
-- ⚡️ Vue 3, Vite 2, pnpm, ESBuild, Vitepress
-- 💪 Vue 3 Composition API
-- 🔥 Written in TypeScript
-- 🗂 File based routing
-- ⚙️ Unit Testing with Vitest
-- 😃 Eslint + Prittier
-- 🎨 UnoCSS - the instant on-demand atomic CSS engine
-- 🌍 I18n ready
-- 🚘 CI/CD with GithubActions
+## 目前只显示动画，暂不支持组件引入（等动画规模大了我就做 🧐）
+
+- ⚡️ 目标很大，技术很菜
+- 😃 CSS YYDS!
 
 ## LICENSE
 
