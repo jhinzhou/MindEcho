@@ -1,4 +1,4 @@
-# 毛玻璃效果
+# 毛玻璃渐变
 
 <div>
   <StyleView></StyleView>

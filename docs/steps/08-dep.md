@@ -19,5 +19,5 @@ npm publish
 ```
 4. 访问代码
 ```
-https://www.npmjs.com/package/booker-ui
+https://www.npmjs.com/package/xxxxxx
 ```

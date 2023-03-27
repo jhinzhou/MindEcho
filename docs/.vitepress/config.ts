@@ -24,7 +24,7 @@ export default defineConfig({
         text: 'CSS',
         items: [
           {
-            text: '📦 css 效果库',
+            text: '⚡️ css 效果库',
             items: [
               { text: '毛玻璃渐变', link: '/components/index' },
               { text: '镜面效果', link: '/components/one' },
@@ -43,7 +43,7 @@ export default defineConfig({
               { text: '08 组件发布', link: '/steps/08-dep' }
             ]
           },
-          { text: '💎 关于', link: '/about' }
+          { text: '💬 关于', link: '/about' }
         ]
       }
     ],
