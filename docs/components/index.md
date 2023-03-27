@@ -1,56 +1,47 @@
-# Button 按钮
-这里有bug，没时间去修，空了一定维护好这个库，不忘初心
+# 毛玻璃效果
 
-## 基础用法
+<div>
+  <StyleView></StyleView>
+</div>
+1.首先我们用三个div标签使用 clip-path 实现三个多边形
 
-基础的函数用法
+```
+<div class="g-bg">
+    <div class="g-polygon g-polygon-1"></div>
+    <div class="g-polygon g-polygon-2"></div>
+    <div class="g-polygon g-polygon-3"></div>
+</div>
+.g-polygon {
+    position: absolute;
+    opacity: .5;
+}
+.g-polygon-1 {
+    // 定位代码，容器高宽随意
+    background: #ffee55;
+    clip-path: polygon(0 10%, 30% 0, 100% 40%, 70% 100%, 20% 90%);
+}
 
-:::demo 使用`size`、`color`、`pain`、`round`属性来定义 Button 的样式。
- <div style="display: flex; gap: 16px; margin-bottom:20px;">
-  <SButton color="blue">主要按钮</SButton>
-  <SButton color="green">绿色按钮</SButton>
-  <SButton color="gray">灰色按钮</SButton>
-  <SButton color="yellow">黄色按钮</SButton>
-  <SButton color="red">红色按钮</SButton>
- </div>
- <div style="display: flex; gap: 16px; margin-bottom:20px;"
- >
-  <SButton color="blue" plain>朴素按钮</SButton>
-  <SButton color="green" plain>绿色按钮</SButton>
-  <SButton color="gray" plain>灰色按钮</SButton>
-  <SButton color="yellow" plain>黄色按钮</SButton>
-  <SButton color="red" plain>红色按钮</SButton>
- </div>
- <div style="display: flex; gap: 16px; margin-bottom:20px;">
-  <SButton size="small" plain>小按钮</SButton>
-  <SButton size="medium" plain>中按钮</SButton>
-  <SButton size="large" plain>大按钮</SButton>
- </div>
- <div style="display: flex; gap: 16px; margin-bottom:20px;">
-  <SButton color="blue" round plain icon="search">搜索</SButton>
-  <SButton color="green" round plain icon="edit">编辑</SButton>
-  <SButton color="gray" round plain icon="check">成功</SButton>
-  <SButton color="yellow" round plain icon="message">提示</SButton>
-  <SButton color="red" round plain icon="delete">删除</SButton>
- </div>
- <div style="display: flex; gap: 16px; margin-bottom:20px;">
-  <SButton color="blue" round plain icon="search"></SButton>
-  <SButton color="green" round plain icon="edit"></SButton>
-  <SButton color="gray" round plain icon="check"></SButton>
-  <SButton color="yellow" round plain icon="message"></SButton>
-  <SButton color="red" round plain icon="delete"></SButton>
- </div>
-:::
+.g-polygon-2 {
+    // 定位代码，容器高宽随意
+    background: #E950D1;
+    clip-path: polygon(10% 0, 100% 70%, 100% 100%, 20% 90%);
+}
 
-## 图标按钮
+.g-polygon-3 {
+    // 定位代码，容器高宽随意
+    background: rgba(87, 80, 233);
+    clip-path: polygon(80% 0, 100% 70%, 100% 100%, 20% 90%);
+}
+```
 
-带图标的按钮可增强辨识度（有文字）或节省空间（无文字）。
+2.使用 backdrop-filter 实现高斯蒙版
 
-:::demo 设置 icon 属性即可，icon 的列表可以参考 Element 的 icon 组件，也可以设置在文字右边的 icon ，只要使用 i 标签即可，可以使用自定义图标。
- <div style="display: flex; gap: 16px;">
-  <SButton icon="edit" plain></SButton>
-  <SButton icon="delete" plain></SButton>
-  <SButton icon="share" plain></SButton>
-  <SButton round plain icon="search">搜索</SButton>
- </div>
-:::
+```
+.g-bg::before {
+        content: "";
+        position: fixed;
+        top: 0; left: 0; bottom: 0; right: 0;
+        backdrop-filter: blur(150px);
+        z-index: 1;
+}
+```

@@ -1,19 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { demoBlockPlugin } from 'vitepress-theme-demoblock'
-// const sidebar = {
-//   '/': [
-//     { text: '快速开始', link: '/' },
-//     {
-//       text: '通用',
-//       children: [{ text: 'Button 按钮', link: '/components/button/' }]
-//     },
-//     { text: '导航' },
-//     { text: '反馈' },
-//     { text: '数据录入' },
-//     { text: '数据展示' },
-//     { text: '布局' }
-//   ]
-// }
+
 export default defineConfig({
   title: 'MindEcho-UI',
   description: 'Just playing around.',
@@ -34,11 +21,14 @@ export default defineConfig({
     ],
     sidebar: [
       {
-        text: '组件',
+        text: 'CSS',
         items: [
           {
-            text: '📦 通用组件',
-            items: [{ text: 'Button 按钮', link: '/components/' }]
+            text: '📦 css 效果库',
+            items: [
+              { text: '毛玻璃效果', link: '/components/index' },
+              { text: '镜面效果', link: '/components/one' },
+            ]
           },
           {
             text: '📃 文档库搭建过程',
