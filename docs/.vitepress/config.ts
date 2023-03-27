@@ -26,7 +26,7 @@ export default defineConfig({
           {
             text: '📦 css 效果库',
             items: [
-              { text: '毛玻璃效果', link: '/components/index' },
+              { text: '毛玻璃渐变', link: '/components/index' },
               { text: '镜面效果', link: '/components/one' },
             ]
           },
