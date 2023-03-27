@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./chunks/framework.6a47aca6.js";const i=JSON.parse('{"title":"反馈页面","description":"","frontmatter":{"title":"反馈页面"},"headers":[],"relativePath":"feedback.md"}'),c={name:"feedback.md"};function r(o,s,n,d,p,_){return a(),t("div")}const m=e(c,[["render",r]]);export{i as __pageData,m as default};
