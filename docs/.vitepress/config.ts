@@ -5,7 +5,7 @@ export default defineConfig({
   title: 'MindEcho-UI',
   description: 'Just playing around.',
   base: '/MindEcho-UI/',
-  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo2.svg' }]],
+  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo2.png' }]],
   themeConfig: {
     logo: '/logo2.png',
     siteTitle: 'MindEcho-UI',
@@ -27,7 +27,7 @@ export default defineConfig({
             text: '⚡️ css 效果库',
             items: [
               { text: '毛玻璃渐变', link: '/components/index' },
-              { text: '镜面效果', link: '/components/one' },
+              { text: '镜面效果', link: '/components/one' }
             ]
           },
           {
