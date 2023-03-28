@@ -1,1 +1,0 @@
-import{_ as s,c as n,o as a,N as l}from"./chunks/framework.6a47aca6.js";const A=JSON.parse('{"title":"组件开发","description":"","frontmatter":{"title":"组件开发"},"headers":[],"relativePath":"steps/02-dev.md"}'),o={name:"steps/02-dev.md"},p=l("",26),t=[p];function e(c,D,r,F,y,i){return a(),n("div",null,t)}const u=s(o,[["render",e]]);export{A as __pageData,u as default};
