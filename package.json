@@ -15,7 +15,13 @@
     "prepare": "husky install",
     "test": "vitest"
   },
-  "keywords": [],
+  "keywords": [
+    "CSS",
+    "VitePress",
+    "Vue3",
+    "组件",
+    "动画"
+  ],
   "author": "ZhouJin",
   "license": "ISC",
   "devDependencies": {
