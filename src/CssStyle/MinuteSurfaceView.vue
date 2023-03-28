@@ -15,8 +15,8 @@
   justify-content: center;
   align-items: center;
   transition: 0.2s all;
-  background: #5b5a5a1a;
-  box-shadow: 5px 5px 10px 5px rgba(44, 44, 44, 0.155);
+  background: #fefefe1a;
+  box-shadow: 2px 2px 4px 2px rgba(44, 44, 44, 0.155);
 }
 
 .card:hover {
