@@ -1,5 +1,5 @@
 import { App } from 'vue'
-import MyButton from './Button/Button'
+import MyButton from './button/Button'
 import FrostedGlassView from './CssStyle/FrostedGlassView.vue'
 
 // 导出单独组件
