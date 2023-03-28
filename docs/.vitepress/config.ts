@@ -5,7 +5,12 @@ export default defineConfig({
   title: 'MindEcho-UI',
   description: 'Just playing around.',
   base: '/MindEcho-UI/',
-  head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo2.png' }]],
+  head: [
+    [
+      'link',
+      { rel: 'icon', type: 'image/svg+xml', href: '/MindEcho-UI/logo2.svg' }
+    ]
+  ],
   themeConfig: {
     logo: '/logo2.png',
     siteTitle: 'MindEcho-UI',
