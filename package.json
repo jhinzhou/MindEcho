@@ -47,6 +47,7 @@
     "@commitlint/cli": "17.0.2",
     "@commitlint/config-conventional": "17.0.2",
     "@unocss/vite": "^0.45.13",
+    "sass": "^1.60.0",
     "vue": "3.2.47"
   }
 }

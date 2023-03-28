@@ -14,8 +14,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  transition: 0.2s all;
   background-color: #fff;
+}
+.g-bg:hover {
+  transform: translateY(-20px);
 }
 .g-polygon {
   position: absolute;
@@ -42,7 +45,7 @@
   clip-path: polygon(0 0, 100% 0, 60% 100%, 20% 90%);
 }
 .g-bg::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
