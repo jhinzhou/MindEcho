@@ -62,6 +62,7 @@ export default defineConfig({
       md.use(demoBlockPlugin, {
         cssPreprocessor: 'sass'
       })
-    }
+    },
+    lineNumbers: true
   }
 })

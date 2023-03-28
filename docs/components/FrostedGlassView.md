@@ -6,33 +6,33 @@
 
 1.首先我们用三个 `div` 标签使用 `clip-path` 实现三个多边形
 
-```js
+```html
 <div class="g-bg">
-    <div class="g-polygon g-polygon-1"></div>
-    <div class="g-polygon g-polygon-2"></div>
-    <div class="g-polygon g-polygon-3"></div>
+  <div class="g-polygon g-polygon-1"></div>
+  <div class="g-polygon g-polygon-2"></div>
+  <div class="g-polygon g-polygon-3"></div>
 </div>
-.g-polygon {
+<style>
+  .g-polygon {
     position: absolute;
-    opacity: .5;
-}
-.g-polygon-1 {
-    // 定位代码，容器高宽随意
+    opacity: 0.5;
+  }
+  .g-polygon-1 {
+    //定位代码，容器高宽随意
     background: #ffee55;
     clip-path: polygon(0 10%, 30% 0, 100% 40%, 70% 100%, 20% 90%);
-}
-
-.g-polygon-2 {
+  }
+  .g-polygon-2 {
     // 定位代码，容器高宽随意
-    background: #E950D1;
+    background: #e950d1;
     clip-path: polygon(10% 0, 100% 70%, 100% 100%, 20% 90%);
-}
-
-.g-polygon-3 {
+  }
+  .g-polygon-3 {
     // 定位代码，容器高宽随意
     background: rgba(87, 80, 233);
     clip-path: polygon(80% 0, 100% 70%, 100% 100%, 20% 90%);
-}
+  }
+</style>
 ```
 
 2.使用 `backdrop-filter` 实现高斯蒙版
