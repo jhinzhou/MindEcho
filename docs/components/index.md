@@ -5,7 +5,7 @@
 </div>
 1.首先我们用三个div标签使用 clip-path 实现三个多边形
 
-```
+```js
 <div class="g-bg">
     <div class="g-polygon g-polygon-1"></div>
     <div class="g-polygon g-polygon-2"></div>
@@ -36,12 +36,15 @@
 
 2.使用 backdrop-filter 实现高斯蒙版
 
-```
+```css
 .g-bg::before {
-        content: "";
-        position: fixed;
-        top: 0; left: 0; bottom: 0; right: 0;
-        backdrop-filter: blur(150px);
-        z-index: 1;
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  backdrop-filter: blur(150px);
+  z-index: 1;
 }
 ```
