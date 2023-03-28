@@ -3,7 +3,7 @@
 <div>
   <FrostedGlassView></FrostedGlassView>
 </div>
-1.首先我们用三个div标签使用 clip-path 实现三个多边形
+1.首先我们用三个 `div` 标签使用 `clip-path` 实现三个多边形
 
 ```js
 <div class="g-bg">
@@ -34,7 +34,7 @@
 }
 ```
 
-2.使用 backdrop-filter 实现高斯蒙版
+2.使用 `backdrop-filter` 实现高斯蒙版
 
 ```css
 .g-bg::before {
@@ -48,3 +48,5 @@
   z-index: 1;
 }
 ```
+
+- [参考](https://github.com/jhinzhou/MindEcho-UI/blob/master/src/CssStyle/FrostedGlassView.vue)
