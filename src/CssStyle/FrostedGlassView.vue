@@ -48,13 +48,14 @@
   clip-path: polygon(0 0, 100% 0, 60% 100%, 20% 90%);
 }
 .g-bg::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   backdrop-filter: blur(150px);
+  -webkit-backdrop-filter: blur(150px);
   z-index: 1;
 }
 </style>
