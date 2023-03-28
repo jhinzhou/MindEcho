@@ -16,9 +16,12 @@
   justify-content: center;
   transition: 0.2s all;
   background-color: #fff;
+  box-shadow: 2px 2px 4px 2px rgba(44, 44, 44, 0.155);
 }
 .g-bg:hover {
   transform: translateY(-20px);
+  box-shadow: 0 10px 20px 10px rgba(223, 223, 223, 0.155);
+  z-index: -1;
 }
 .g-polygon {
   position: absolute;
