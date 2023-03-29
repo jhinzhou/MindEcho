@@ -19,8 +19,8 @@
   user-select: none;
 }
 .battery {
-  height: 200px;
-  width: 100px;
+  height: 90%;
+  width: 20%;
   border-radius: 15px 15px 5px 5px;
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.22));
   background: #fff;
