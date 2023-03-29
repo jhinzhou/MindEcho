@@ -18,6 +18,11 @@
   -webkit-user-select: none;
   user-select: none;
 }
+.card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 10px 20px 10px rgba(223, 223, 223, 0.155);
+  z-index: -1;
+}
 .battery {
   height: 90%;
   width: 20%;
