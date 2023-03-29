@@ -1,7 +1,7 @@
 # 毛玻璃渐变
 
 <div>
-  <FrostedGlassView></FrostedGlassView>
+  <FrostedGlassView />
 </div>
 
 1.首先我们用三个 `div` 标签使用 `clip-path` 实现三个多边形

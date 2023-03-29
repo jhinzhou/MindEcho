@@ -32,7 +32,8 @@ export default defineConfig({
             text: '⚡️ css 效果库',
             items: [
               { text: '毛玻璃渐变', link: '/components/FrostedGlassView' },
-              { text: '镜面效果', link: '/components/MinuteSurfaceView' }
+              // { text: '镜面效果', link: '/components/MinuteSurfaceView' }
+              { text: '电池-充电', link: '/components/BatteryView' }
             ]
           },
           // {

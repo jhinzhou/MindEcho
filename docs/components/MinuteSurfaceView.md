@@ -1,7 +1,7 @@
 # 镜面效果
 
 <div>
-    <MinuteSurfaceView></MinuteSurfaceView>
+    <MinuteSurfaceView />
 </div>
 
 - 通过 `-webkit-box-reflect` 可以作出镜面效果
