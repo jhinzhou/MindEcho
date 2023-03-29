@@ -49,7 +49,6 @@
 
   &:hover {
     color: #fff;
-    -webkit-box-shadow: 0 0 5px #0ebeff, 0 0 25px #0ebeff;
     box-shadow: 0 0 5px #0ebeff, 0 0 25px #0ebeff;
 
     &::after,
@@ -90,12 +89,22 @@
 }
 
 .btn1 {
-  -webkit-filter: hue-rotate(180deg);
   filter: hue-rotate(180deg);
+  &::before {
+    filter: hue-rotate(180deg);
+  }
+  &::after {
+    filter: hue-rotate(180deg);
+  }
 }
 
 .btn2 {
-  -webkit-filter: hue-rotate(270deg);
   filter: hue-rotate(270deg);
+  &::before {
+    filter: hue-rotate(270deg);
+  }
+  &::after {
+    filter: hue-rotate(270deg);
+  }
 }
 </style>
