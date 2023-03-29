@@ -54,6 +54,7 @@
     "vue-router": "^4.1.6"
   },
   "dependencies": {
+    "css-doodle": "^0.34.6",
     "@commitlint/cli": "17.0.2",
     "@commitlint/config-conventional": "17.0.2",
     "@unocss/vite": "^0.50.6",

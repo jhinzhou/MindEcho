@@ -59,7 +59,7 @@
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     z-index: -2;
     left: 50%;
@@ -76,7 +76,7 @@
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     z-index: -1;
     left: 2px;
@@ -90,21 +90,21 @@
 
 .btn1 {
   filter: hue-rotate(180deg);
-  &::before {
-    filter: hue-rotate(180deg);
-  }
-  &::after {
-    filter: hue-rotate(180deg);
-  }
+  // &::before {
+  //   filter: hue-rotate(180deg);
+  // }
+  // &::after {
+  //   filter: hue-rotate(180deg);
+  // }
 }
 
 .btn2 {
   filter: hue-rotate(270deg);
-  &::before {
-    filter: hue-rotate(270deg);
-  }
-  &::after {
-    filter: hue-rotate(270deg);
-  }
+  // &::before {
+  //   filter: hue-rotate(270deg);
+  // }
+  // &::after {
+  //   filter: hue-rotate(270deg);
+  // }
 }
 </style>

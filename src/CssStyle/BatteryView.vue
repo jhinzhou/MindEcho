@@ -25,7 +25,7 @@
 }
 .battery {
   height: 90%;
-  width: 20%;
+  width: 130px;
   border-radius: 15px 15px 5px 5px;
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.22));
   background: #fff;
@@ -60,7 +60,7 @@
     box-shadow: 0 14px 28px rgba(33, 150, 243, 0),
       0 10px 10px rgba(9, 188, 215, 0.08);
     animation: charging 6s linear infinite;
-    filter: hue-rotate(90deg);
+    filter: hue-rotate(120deg);
   }
 }
 

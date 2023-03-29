@@ -13,3 +13,7 @@
 ```
 
 - [参考](https://github.com/jhinzhou/MindEcho-UI/blob/master/src/CssStyle/MinuteSurfaceView.vue)
+
+::: warning
+ `safari` 有兼容性问题未解决
+:::

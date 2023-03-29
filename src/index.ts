@@ -1,6 +1,8 @@
 import { createApp } from "vue/dist/vue.esm-browser";
 import MindEchoUI from "./entry";
 import "unocss";
+import './assets/css/main.css'
+import 'css-doodle'
 import "@iconify-json/ic";
 
 createApp({

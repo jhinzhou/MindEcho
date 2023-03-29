@@ -64,10 +64,6 @@
     filter: hue-rotate(90deg);
   }
 }
-
-
-- [参考](https://github.com/jhinzhou/MindEcho-UI/blob/master/src/CssStyle/BatteryView.vue)
-
 @keyframes charging {
   50% {
     box-shadow: 0 14px 28px rgba(0, 150, 136, 0.83),
@@ -92,3 +88,9 @@
 </style>
 
 ```
+
+- [参考](https://github.com/jhinzhou/MindEcho-UI/blob/master/src/CssStyle/BatteryView.vue)
+
+::: warning
+ `safari` 有兼容性问题未解决
+:::
