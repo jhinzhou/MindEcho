@@ -35,19 +35,20 @@ export default defineConfig({
               { text: '镜面效果', link: '/components/MinuteSurfaceView' }
             ]
           },
-          {
-            text: '📃 文档库搭建过程',
-            items: [
-              { text: '01 组件环境', link: '/steps/01-env' },
-              { text: '02 组件开发', link: '/steps/02-dev' },
-              { text: '03 组件构建', link: '/steps/03-pkg' },
-              { text: '04 组件样式', link: '/steps/04-css' },
-              { text: '05 组件文档', link: '/steps/05-doc' },
-              { text: '06 组件测试', link: '/steps/06-tst' },
-              { text: '07 组件规范', link: '/steps/07-spe' },
-              { text: '08 组件发布', link: '/steps/08-dep' }
-            ]
-          },
+          // {
+          //   text: '📃 文档库搭建过程',
+          //   items: [
+          //     { text: '01 组件环境', link: '/steps/01-env' },
+          //     { text: '02 组件开发', link: '/steps/02-dev' },
+          //     { text: '03 组件构建', link: '/steps/03-pkg' },
+          //     { text: '04 组件样式', link: '/steps/04-css' },
+          //     { text: '05 组件文档', link: '/steps/05-doc' },
+          //     { text: '06 组件测试', link: '/steps/06-tst' },
+          //     { text: '07 组件规范', link: '/steps/07-spe' },
+          //     { text: '08 组件发布', link: '/steps/08-dep' }
+          //   ]
+          // },
+          { text: '💬 Note', link: '/note' },
           { text: '💬 关于', link: '/about' }
         ]
       }

@@ -45,6 +45,7 @@
   left: 0;
   bottom: 0;
   right: 0;
+  -webkit-backdrop-filter: blur(150px);
   backdrop-filter: blur(150px);
   z-index: 1;
 }
