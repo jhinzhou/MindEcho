@@ -1,0 +1,1 @@
+import{_ as e,c as t,o,N as a}from"./chunks/framework.6a47aca6.js";const f=JSON.parse('{"title":"兼容性总结","description":"","frontmatter":{},"headers":[],"relativePath":"note.md"}'),c={name:"note.md"},s=a("",3),r=[s];function _(d,n,i,p,l,m){return o(),t("div",null,r)}const u=e(c,[["render",_]]);export{f as __pageData,u as default};
