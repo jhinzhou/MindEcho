@@ -87,10 +87,12 @@
 }
 
 .btn1 {
+  -webkit-filter: hue-rotate(180deg);
   filter: hue-rotate(180deg);
 }
 
 .btn2 {
+  -webkit-filter: hue-rotate(270deg);
   filter: hue-rotate(270deg);
 }
 </style>
