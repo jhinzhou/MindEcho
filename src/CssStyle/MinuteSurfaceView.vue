@@ -17,6 +17,8 @@
   transition: 0.2s all;
   background: #fefefe1a;
   box-shadow: 2px 2px 4px 2px rgba(44, 44, 44, 0.155);
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .card:hover {
@@ -43,10 +45,11 @@
   cursor: pointer;
   transition: 0.3s;
   -webkit-box-reflect: below 10px
-    linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+    linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.4));
 
   &:hover {
     color: #fff;
+    -webkit-box-shadow: 0 0 5px #0ebeff, 0 0 25px #0ebeff;
     box-shadow: 0 0 5px #0ebeff, 0 0 25px #0ebeff;
 
     &::after,

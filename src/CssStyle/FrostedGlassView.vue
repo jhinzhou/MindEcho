@@ -17,6 +17,8 @@
   transition: 0.2s all;
   background-color: #fff;
   box-shadow: 2px 2px 4px 2px rgba(44, 44, 44, 0.155);
+  -webkit-user-select: none;
+  user-select: none;
 }
 .g-bg:hover {
   transform: translateY(-20px);
