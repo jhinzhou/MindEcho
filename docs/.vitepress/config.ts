@@ -36,6 +36,7 @@ export default defineConfig({
               { text: '镜面-反射', link: '/components/MinuteSurfaceView' },
               { text: '电池-充电', link: '/components/BatteryView' },
               { text: '阴影-浮雕', link: '/components/ShadowView' },
+              { text: '日环食效果', link: '/components/EclipseView' },
               { text: '粒子-动画', link: '/components/PerlinNoiseView' }
             ]
           },

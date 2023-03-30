@@ -6,6 +6,7 @@ import BatteryView from './CssStyle/BatteryView.vue'
 import PerlinNoiseView from './CssStyle/PerlinNoiseView.vue'
 import ShadowView from './CssStyle/ShadowView.vue'
 import MarqueeView from './CssStyle/MarqueeView.vue'
+import EclipseView from './CssStyle/EclipseView.vue'
 import 'css-doodle'
 // 导出单独组件
 export {
@@ -15,7 +16,8 @@ export {
   BatteryView,
   PerlinNoiseView,
   ShadowView,
-  MarqueeView
+  MarqueeView,
+  EclipseView
 }
 
 // 编写一个插件，实现一个install方法
@@ -29,5 +31,6 @@ export default {
     app.component('PerlinNoiseView', PerlinNoiseView)
     app.component('ShadowView', ShadowView)
     app.component('MarqueeView', MarqueeView)
+    app.component('EclipseView', EclipseView)
   }
 }
