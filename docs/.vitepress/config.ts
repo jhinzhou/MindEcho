@@ -40,6 +40,10 @@ export default defineConfig({
               { text: '粒子-动画', link: '/components/PerlinNoiseView' }
             ]
           },
+          {
+            text: '⚡️ svg',
+            items: [{ text: '烟雾效果', link: '/components/SmogView' }]
+          },
           // {
           //   text: '📃 文档库搭建过程',
           //   items: [
