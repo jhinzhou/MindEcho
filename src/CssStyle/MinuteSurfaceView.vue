@@ -21,10 +21,6 @@
   user-select: none;
 }
 
-.card:hover {
-  transform: translateY(-20px);
-  box-shadow: 0 10px 20px 10px rgba(223, 223, 223, 0.155);
-}
 @keyframes rotate {
   100% {
     transform: translate(-50%, -50%) rotate(1turn);
@@ -59,7 +55,7 @@
   }
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     z-index: -2;
     left: 50%;
@@ -76,7 +72,7 @@
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     z-index: -1;
     left: 2px;

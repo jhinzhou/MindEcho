@@ -13,15 +13,15 @@
   </div>
 </template>
 <script setup>
-import { onMounted } from "vue";
-import "css-doodle";
+import { onMounted } from 'vue'
+import 'css-doodle'
 onMounted(() => {
-  const doodle = document.querySelector("css-doodle");
+  const doodle = document.querySelector('css-doodle')
 
-  document.addEventListener("click", function (e) {
-    doodle.update();
-  });
-});
+  document.addEventListener('click', function (e) {
+    doodle.update()
+  })
+})
 </script>
 <style scoped>
 .card {
@@ -38,10 +38,5 @@ onMounted(() => {
   box-shadow: 2px 2px 4px 2px rgba(44, 44, 44, 0.155);
   -webkit-user-select: none;
   user-select: none;
-}
-.card:hover {
-  transform: translateY(-20px);
-  box-shadow: 0 10px 20px 10px rgba(223, 223, 223, 0.155);
-  z-index: -1;
 }
 </style>

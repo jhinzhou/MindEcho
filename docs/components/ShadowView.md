@@ -13,3 +13,5 @@ box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.4), -7px -7px 12px rgba(255, 255, 255, 
     inset -7px -7px 12px rgba(255, 255, 255, 0.9), inset 7px 7px 12px rgba(0, 0, 0, 0.4);
 }
 ```
+
+- [参考](https://github.com/jhinzhou/MindEcho-UI/blob/master/src/CssStyle/ShadowView.vue)

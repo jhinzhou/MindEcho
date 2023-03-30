@@ -5,6 +5,7 @@ import MinuteSurfaceView from './CssStyle/MinuteSurfaceView.vue'
 import BatteryView from './CssStyle/BatteryView.vue'
 import PerlinNoiseView from './CssStyle/PerlinNoiseView.vue'
 import ShadowView from './CssStyle/ShadowView.vue'
+import MarqueeView from './CssStyle/MarqueeView.vue'
 import 'css-doodle'
 // 导出单独组件
 export {
@@ -13,7 +14,8 @@ export {
   MinuteSurfaceView,
   BatteryView,
   PerlinNoiseView,
-  ShadowView
+  ShadowView,
+  MarqueeView
 }
 
 // 编写一个插件，实现一个install方法
@@ -26,5 +28,6 @@ export default {
     app.component('BatteryView', BatteryView)
     app.component('PerlinNoiseView', PerlinNoiseView)
     app.component('ShadowView', ShadowView)
+    app.component('MarqueeView', MarqueeView)
   }
 }

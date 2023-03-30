@@ -32,10 +32,11 @@ export default defineConfig({
             text: '⚡️ css 效果库',
             items: [
               { text: '毛玻璃渐变', link: '/components/FrostedGlassView' },
-              { text: '镜面效果', link: '/components/MinuteSurfaceView' },
+              { text: '跑马灯效果', link: '/components/MarqueeView' },
+              { text: '镜面-反射', link: '/components/MinuteSurfaceView' },
               { text: '电池-充电', link: '/components/BatteryView' },
-              { text: '粒子动画', link: '/components/PerlinNoiseView' },
-              { text: '浮雕阴影', link: '/components/ShadowView' }
+              { text: '粒子-动画', link: '/components/PerlinNoiseView' },
+              { text: '阴影-浮雕', link: '/components/ShadowView' }
             ]
           },
           // {

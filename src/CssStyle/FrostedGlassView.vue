@@ -20,11 +20,7 @@
   -webkit-user-select: none;
   user-select: none;
 }
-.g-bg:hover {
-  transform: translateY(-20px);
-  box-shadow: 0 10px 20px 10px rgba(223, 223, 223, 0.155);
-  z-index: -1;
-}
+
 .g-polygon {
   position: absolute;
   opacity: 0.5;
