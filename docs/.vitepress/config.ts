@@ -35,8 +35,8 @@ export default defineConfig({
               { text: '跑马灯效果', link: '/components/MarqueeView' },
               { text: '镜面-反射', link: '/components/MinuteSurfaceView' },
               { text: '电池-充电', link: '/components/BatteryView' },
-              { text: '粒子-动画', link: '/components/PerlinNoiseView' },
-              { text: '阴影-浮雕', link: '/components/ShadowView' }
+              { text: '阴影-浮雕', link: '/components/ShadowView' },
+              { text: '粒子-动画', link: '/components/PerlinNoiseView' }
             ]
           },
           // {
