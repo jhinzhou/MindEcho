@@ -10,6 +10,8 @@
   <a href="https://github.com/jhinzhou/MindEcho-UI/actions/workflows/main.yml">
   <img src="https://github.com/jhinzhou/MindEcho-UI/actions/workflows/main.yml/badge.svg?branch=master" alt="CI" style="max-width: 100%;">
   </a>
+  <img src="https://img.shields.io/github/license/jhinzhou/MindEcho-UI" alt="CI" style="max-width: 100%;">
+  ![GitHub package.json version](https://img.shields.io/github/package-json/v/jhinzhou/MindEcho-UI?style=flat-square)
 </p>
 
 ## 目前只显示动画，暂不支持组件引入（等动画规模大了我就做 🧐）
