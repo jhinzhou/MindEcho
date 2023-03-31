@@ -1,7 +1,7 @@
 <p align="center">
 <img src="https://github.com/jhinzhou/MindEcho-UI/blob/master/docs/public/logo2.png" style="width:200px;" />
 </p>
-<h1 align="center">MindEcho-UI</h1>
+<h1 align="center">MindEcho</h1>
 
 <p align="center">
 一个基于 Vitepress 的 CSS 动画案例库（保不齐后期支持 vue 组件引入使用）🧐
