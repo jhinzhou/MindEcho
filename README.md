@@ -4,7 +4,7 @@
 <h1 align="center">MindEcho-UI</h1>
 
 <p align="center">
-一个基于 VUE3,VITE,VITEPRESS 的 CSS 动画库（保不齐后期支持 vue 组件库）🧐
+一个基于 Vitepress 的 CSS 动画案例库（保不齐后期支持 vue 组件引入使用）🧐
 </p>
 <p align="center">
   <a href="https://github.com/jhinzhou/MindEcho-UI/actions/workflows/main.yml">
@@ -17,8 +17,9 @@
 
 ## 目前只显示动画，暂不支持组件引入（等动画规模大了我就做 🧐）
 
-- ⚡️ 目标很大，技术很菜
+- ⚡️ 技术很菜，但目标很大
 - 😃 CSS YYDS!
+- 😃 JS YYDS!
 
 ## LICENSE
 
