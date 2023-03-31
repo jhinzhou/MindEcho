@@ -7,7 +7,6 @@ import PerlinNoiseView from './CssStyle/PerlinNoiseView.vue'
 import ShadowView from './CssStyle/ShadowView.vue'
 import MarqueeView from './CssStyle/MarqueeView.vue'
 import EclipseView from './CssStyle/EclipseView.vue'
-import SmogView from './CssStyle/SmogView.vue'
 import 'css-doodle'
 // 导出单独组件
 export {
@@ -18,8 +17,7 @@ export {
   PerlinNoiseView,
   ShadowView,
   MarqueeView,
-  EclipseView,
-  SmogView
+  EclipseView
 }
 
 // 编写一个插件，实现一个install方法
@@ -34,6 +32,5 @@ export default {
     app.component('ShadowView', ShadowView)
     app.component('MarqueeView', MarqueeView)
     app.component('EclipseView', EclipseView)
-    app.component('SmogView', SmogView)
   }
 }

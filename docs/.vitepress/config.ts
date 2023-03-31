@@ -42,7 +42,7 @@ export default defineConfig({
           },
           {
             text: '⚡️ svg',
-            items: [{ text: '烟雾效果', link: '/components/SmogView' }]
+            items: []
           },
           // {
           //   text: '📃 文档库搭建过程',
