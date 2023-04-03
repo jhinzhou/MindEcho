@@ -24,6 +24,7 @@
   z-index: -1;
 }
 .battery {
+  position: relative;
   height: 90%;
   width: 130px;
   border-radius: 15px 15px 5px 5px;

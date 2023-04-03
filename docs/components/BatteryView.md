@@ -25,6 +25,7 @@
   user-select: none;
 }
 .battery {
+  position: relative;
   height: 90%;
   width: 20%;
   border-radius: 15px 15px 5px 5px;
@@ -90,7 +91,3 @@
 ```
 
 - [参考](https://github.com/jhinzhou/MindEcho-UI/blob/master/src/CssStyle/BatteryView.vue)
-
-::: warning
- `safari` 有兼容性问题未解决
-:::
