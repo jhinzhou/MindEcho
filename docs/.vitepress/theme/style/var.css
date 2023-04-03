@@ -14,7 +14,9 @@
   );
   --vp-home-hero-image-filter: blur(150px);
 }
-
+.custom-block {
+  border: 0px solid transparent;
+}
 .custom-block .custom-block-title {
   font-weight: 600;
   margin-bottom: -0.4rem;
@@ -27,6 +29,7 @@
   border-left-width: 0.5rem;
   border-left-style: solid;
   margin: 1rem 0;
+  border-radius: 6px;
 }
 
 .custom-block.tip {
