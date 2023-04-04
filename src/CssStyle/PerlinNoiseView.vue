@@ -1,6 +1,6 @@
 <template>
   <div class="card">
-    <css-doodle grid="100x100">
+    <css-doodle class="card" grid="31x31">
       :doodle { @size: 80vw 35vmin; perspective: 10px; } :container {
       perspective: 50px; transform-style: preserve-3d; } position: absolute;
       top: 0; left: 0; width: 2px; height: 2px; border-radius: 50%; left: 50%;
@@ -13,15 +13,15 @@
   </div>
 </template>
 <script setup>
-import { onMounted } from 'vue'
-import 'css-doodle'
+import { onMounted } from "vue";
+import "css-doodle";
 onMounted(() => {
-  const doodle = document.querySelector('css-doodle')
+  const doodle = document.querySelector("css-doodle");
 
-  document.addEventListener('click', function (e) {
-    doodle.update()
-  })
-})
+  document.addEventListener("click", function (e) {
+    doodle.update();
+  });
+});
 </script>
 <style scoped>
 .card {
