@@ -1,9 +1,9 @@
 {
-  "name": "MindEcho",
-  "version": "1.0.0",
-  "description": "one step",
+  "name": "mindecho",
+  "version": "1.0.1",
+  "description": "one step, one step",
   "main": "index.js",
-  "homepage": "https://jhinzhou.github.io/MindEcho-UI/",
+  "homepage": "https://jhinzhou.github.io/MindEcho/",
   "scripts": {
     "build": "vite build",
     "dev": "vite",

@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: MindEcho
-  text: 一个 CSS 动画库
+  text: 一个前端杂记
   tagline:
   image:
     src: /logo2.png
@@ -14,15 +14,15 @@ hero:
       link: /guide/
     - theme: alt
       text: GitHub
-      link: https://github.com/jhinzhou/MindEcho-UI
+      link: https://github.com/jhinzhou/MindEcho
 
 features:
   - icon: ⚡️
     title: CSS
     details: 简单的 CSS 展示炫酷的动画
   - icon: 🖖
-    title: Power of Vue meets Markdown
-    details: 详细的文档支持
+    title: JS
+    details: 详细的代码展示
   - icon: 🛠️
     title: Simple and minimal, always
     details: 简洁，方便

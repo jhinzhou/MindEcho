@@ -2,9 +2,9 @@ import { defineConfig } from 'vitepress'
 import { demoBlockPlugin } from 'vitepress-theme-demoblock'
 
 export default defineConfig({
-  title: 'MindEcho-UI',
+  title: 'MindEcho',
   description: 'Just playing around.',
-  base: '/MindEcho-UI/',
+  base: '/MindEcho/',
   head: [
     [
       'link',
@@ -13,11 +13,11 @@ export default defineConfig({
   ],
   themeConfig: {
     logo: '/logo2.png',
-    siteTitle: 'MindEcho-UI',
+    siteTitle: 'MindEcho',
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/jhinzhou/MindEcho-UI'
+        link: 'https://github.com/jhinzhou/MindEcho'
       }
     ],
     nav: [
@@ -26,10 +26,15 @@ export default defineConfig({
     ],
     sidebar: [
       {
-        text: 'CSS',
+        text: '前端',
         items: [
           {
-            text: '⚡️ css 效果库',
+            text: '⚡️ JS 杂记',
+            items: [
+            ]
+          },
+          {
+            text: '⚡️ CSS 效果库',
             items: [
               { text: '毛玻璃渐变', link: '/components/FrostedGlassView' },
               { text: '跑马灯效果', link: '/components/MarqueeView' },
@@ -41,7 +46,7 @@ export default defineConfig({
             ]
           },
           {
-            text: '⚡️ svg',
+            text: '⚡️ SVG',
             items: []
           },
           // {
