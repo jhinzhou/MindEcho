@@ -1,0 +1,1 @@
+import{_ as s,c as n,o as a,N as l}from"./chunks/framework.068f76bd.js";const u=JSON.parse('{"title":"组件环境","description":"","frontmatter":{"title":"组件环境"},"headers":[],"relativePath":"steps/01-env.md"}'),p={name:"steps/01-env.md"},e=l("",16),o=[e];function t(c,r,i,D,F,y){return a(),n("div",null,o)}const C=s(p,[["render",t]]);export{u as __pageData,C as default};
