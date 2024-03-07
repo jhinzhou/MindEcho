@@ -31,10 +31,11 @@ export default defineConfig({
           {
             text: '⚡️ JS 杂记',
             items: [
+              { text: '日期和时间', link: '/components/js/TimeView' }
             ]
           },
           {
-            text: '⚡️ CSS 效果库',
+            text: '⚡️ CSS 动画',
             items: [
               { text: '毛玻璃渐变', link: '/components/FrostedGlassView' },
               { text: '跑马灯效果', link: '/components/MarqueeView' },
