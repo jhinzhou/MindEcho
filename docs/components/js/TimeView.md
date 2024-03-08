@@ -1,4 +1,4 @@
-# 时间和日期
+# 日期
 
 ```js
 console.log(new Date('2024-03-06'))

@@ -31,7 +31,8 @@ export default defineConfig({
           {
             text: '⚡️ JS 杂记',
             items: [
-              { text: '日期和时间', link: '/components/js/TimeView' }
+              { text: 'Callback回调', link: '/components/js/CallbackView' },
+              { text: 'Date日期', link: '/components/js/TimeView' }
             ]
           },
           {
