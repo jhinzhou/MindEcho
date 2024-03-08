@@ -1,0 +1,1 @@
+import{_ as s,c as n,o as a,N as l}from"./chunks/framework.068f76bd.js";const i=JSON.parse('{"title":"日期","description":"","frontmatter":{},"headers":[],"relativePath":"components/js/TimeView.md"}'),p={name:"components/js/TimeView.md"},o=l("",13),e=[o];function t(c,r,y,F,D,A){return a(),n("div",null,e)}const b=s(p,[["render",t]]);export{i as __pageData,b as default};
