@@ -32,7 +32,14 @@ export default defineConfig({
             text: '⚡️ JS 杂记',
             items: [
               { text: 'Callback回调', link: '/components/js/CallbackView' },
-              { text: 'Date日期', link: '/components/js/TimeView' }
+              { text: 'Date日期', link: '/components/js/TimeView' },
+              { text: 'Re-重导出', link: '/components/js/Re-exportView' },
+            ]
+          },
+          {
+            text: '⚡️ CSS 杂记',
+            items: [
+              { text: 'Css变量', link: '/components/css/VariableView' }
             ]
           },
           {
