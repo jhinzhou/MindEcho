@@ -46,7 +46,7 @@
   clip-path: polygon(0 0, 100% 0, 60% 100%, 20% 90%);
 }
 .g-bg::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;

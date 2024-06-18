@@ -55,7 +55,7 @@
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     z-index: -2;
     left: 50%;
@@ -72,7 +72,7 @@
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     z-index: -1;
     left: 2px;

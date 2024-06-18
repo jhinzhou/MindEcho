@@ -42,7 +42,7 @@
   padding: 2rem;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     z-index: -2;
     left: -50%;
@@ -59,7 +59,7 @@
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     z-index: -1;
     left: 3px;
@@ -95,7 +95,7 @@
   padding: 2rem;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     z-index: -2;
     left: -50%;
@@ -114,7 +114,7 @@
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     z-index: -1;
     left: 3px;
