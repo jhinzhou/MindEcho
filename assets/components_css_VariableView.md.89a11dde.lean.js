@@ -1,1 +1,0 @@
-import{_ as s,c as n,o as a,N as l}from"./chunks/framework.068f76bd.js";const b=JSON.parse('{"title":"Css变量","description":"","frontmatter":{},"headers":[],"relativePath":"components/css/VariableView.md"}'),p={name:"components/css/VariableView.md"},e=l("",10),o=[e];function r(c,t,i,D,F,y){return a(),n("div",null,o)}const u=s(p,[["render",r]]);export{b as __pageData,u as default};
