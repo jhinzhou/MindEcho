@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { presetUno, presetAttributify, presetIcons } from 'unocss'
 import Unocss from './config/unocss'
-const postcssPresetEnv = require('postcss-preset-env')
+import postcssPresetEnv from 'postcss-preset-env'
 // https://vitejs.dev/config/
 const rollupOptions = {
   external: ['vue', 'vue-router'],
