@@ -29,6 +29,33 @@ export default defineConfig({
         text: '前端',
         items: [
           {
+            text: '⚡️ JS 杂记',
+            items: [
+              { text: 'Callback回调', link: '/components/js/CallbackView' },
+              { text: 'Date日期', link: '/components/js/TimeView' },
+              { text: 'Re-重导出', link: '/components/js/Re-exportView' },
+              { text: 'Gltf-3D模型', link: '/components/js/Gltf-3D' },
+            ]
+          },
+          {
+            text: '⚡️ CSS 杂记',
+            items: [
+              { text: 'Css变量', link: '/components/css/VariableView' }
+            ]
+          },
+          {
+            text: '⚡️ CSS 动画',
+            items: [
+              { text: '毛玻璃渐变', link: '/components/FrostedGlassView' },
+              { text: '跑马灯效果', link: '/components/MarqueeView' },
+              { text: '镜面-反射', link: '/components/MinuteSurfaceView' },
+              { text: '电池-充电', link: '/components/BatteryView' },
+              { text: '阴影-浮雕', link: '/components/ShadowView' },
+              { text: '日环食效果', link: '/components/EclipseView' },
+              { text: '粒子-动画', link: '/components/PerlinNoiseView' }
+            ]
+          },
+          {
             text: '⚡️ TypeScript',
             items: [
               { text: '0.Start', link: '/components/typeScript/0.Start' },
@@ -65,32 +92,6 @@ export default defineConfig({
               { text: '31.TypeScript AST', link: '/components/typeScript/31.玩转 TypeScript AST：AST Checker 与 CodeMod' },
               { text: '32.End', link: '/components/typeScript/32.感谢相伴：是结束，也是开始' },
               { text: '33.面试中的ts', link: '/components/typeScript/33.漫谈篇：面试中的 TypeScript' },
-            ]
-          },
-          {
-            text: '⚡️ JS 杂记',
-            items: [
-              { text: 'Callback回调', link: '/components/js/CallbackView' },
-              { text: 'Date日期', link: '/components/js/TimeView' },
-              { text: 'Re-重导出', link: '/components/js/Re-exportView' },
-            ]
-          },
-          {
-            text: '⚡️ CSS 杂记',
-            items: [
-              { text: 'Css变量', link: '/components/css/VariableView' }
-            ]
-          },
-          {
-            text: '⚡️ CSS 动画',
-            items: [
-              { text: '毛玻璃渐变', link: '/components/FrostedGlassView' },
-              { text: '跑马灯效果', link: '/components/MarqueeView' },
-              { text: '镜面-反射', link: '/components/MinuteSurfaceView' },
-              { text: '电池-充电', link: '/components/BatteryView' },
-              { text: '阴影-浮雕', link: '/components/ShadowView' },
-              { text: '日环食效果', link: '/components/EclipseView' },
-              { text: '粒子-动画', link: '/components/PerlinNoiseView' }
             ]
           },
           {
