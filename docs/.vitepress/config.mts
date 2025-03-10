@@ -112,7 +112,8 @@ export default defineConfig({
           //   ]
           // },
           { text: '💬 Note', link: '/note' },
-          { text: '💬 关于', link: '/about' }
+          { text: '💬 关于', link: '/about' },
+          { text: '📃 知识', link:'/test'}
         ]
       }
     ],
