@@ -1,4 +1,5 @@
-# 什么是 BFC？
+# 知识点
+## 什么是 BFC？
 
 - BFC（Block Formatting Context，块级格式化上下文）
 - BFC 的作用
@@ -43,7 +44,7 @@
   }
   ```
 
-# 函数柯理化，应用场景
+## 函数柯理化，应用场景
 
 - 柯里化（Currying） 是指将一个 接受多个参数的函数 转换成 一系列 只接受一个参数的函数的技术
 - 场景：代码复用、拆分计算、函数式编程、组合多个函数
@@ -92,7 +93,7 @@
   console.log(excite("hello")); // "Hello!"
   ```
 
-# 手写防抖
+## 手写防抖
 
 - 防抖（Debounce） 是一种优化技术，它可以 限制高频触发的函数，让函数在 最后一次触发后一段时间才执行
 - 场景：搜索框输入（防止每次输入都触发请求）、窗口调整（防止频繁计算布局）、表单验证（用户停止输入后再校验）、按钮点击（防止用户多次点击）
@@ -169,7 +170,7 @@
   saveData.cancel(); // 取消了防抖，不会执行
   ```
 
-# 手写节流
+## 手写节流
 
 - 节流（Throttle） 是一种优化技术，它可以限制高频触发的函数，让函数在固定时间间隔内最多执行一次。
 - 基础版：鼠标移动、页面滚动
@@ -212,7 +213,7 @@
 
 - 高级版带 leading、trailing：按钮防连点，暂时不做了解
 
-# css 之 display 的 inline、block、inline-block
+## css 之 display 的 inline、block、inline-block
 
 | 属性           | block                      | inline-block                | inline                     |
 |--------------|--------------------------|--------------------------|--------------------------|
@@ -222,7 +223,7 @@
 | 适用场景     | `div`、`p`、`section`     | `button`、`nav`、`img`    | `span`、`a`、`strong`、`em` |
 
 
-# TCP、TCP/IP 、UDP 和 HTTP 关系，三次握手，四次挥手
+## TCP、TCP/IP 、UDP 和 HTTP 关系，三次握手，四次挥手
 
 | TCP/IP 四层模型 | OSI 七层模型         | 示例协议                |
 |----------------|--------------------|-----------------------|
@@ -267,7 +268,7 @@ HTTP/1.1 1999 长连接（Keep-Alive）、管道化 队头阻塞
 HTTP/2.0 2015 多路复用、二进制传输、头部压缩 TCP 仍有阻塞
 HTTP/3.0 2022 基于 QUIC（UDP）、低延迟 部署复杂
 
-# js 实现栈
+## js 实现栈
 
 - 使用基本数组方法，缺点：数组扩容会带来性能损耗
 
@@ -361,7 +362,7 @@ HTTP/3.0 2022 基于 QUIC（UDP）、低延迟 部署复杂
   console.log(stack.peek()); // 10
   ```
 
-# js 中的哈希表，object 是最基础的哈希表（键值对），推荐使用 map
+## js 中的哈希表，object 是最基础的哈希表（键值对），推荐使用 map
 
 ```js
 const hashMap = new Map();
@@ -462,7 +463,7 @@ myHashTable.delete("age");
 console.log(myHashTable.has("age")); // false
 ```
 
-# 如何删除一个 dom 节点
+## 如何删除一个 dom 节点
 
 - remove() // IE 不支持
 
@@ -492,7 +493,7 @@ const parent = document.getElementById("parentElement");
 parent.innerHTML = ""; // 清空所有子元素
 ```
 
-# 浏览器的渲染页面机制
+## 浏览器的渲染页面机制
 
 当我们在浏览器中输入 URL 并按下 回车，浏览器会经历多个阶段来渲染网页。主要流程如下：
 
@@ -503,9 +504,9 @@ parent.innerHTML = ""; // 清空所有子元素
 绘制（Painting） → 绘制像素到屏幕上
 合成（Compositing） → 处理复杂的 UI 组件
 
-# 安全、性能优化、浏览器兼容
+## 安全、性能优化、浏览器兼容
 
-# 常见 web 攻击，xss（具体怎么过滤，有哪些常见需要过滤的制服），csrf，dos，sql 注入，点击劫持，如何攻击以及如何预防
+## 常见 web 攻击，xss（具体怎么过滤，有哪些常见需要过滤的制服），csrf，dos，sql 注入，点击劫持，如何攻击以及如何预防
 
 ## 1. XSS（跨站脚本攻击）
 ### 攻击方式：
@@ -542,9 +543,9 @@ XSS 允许攻击者在受害者的浏览器中执行恶意脚本，通常是通�
 | DNS 劫持  | 伪造网站         | HTTPS, 安全 DNS                          |
 
 
-# 影响深刻的项目、或者困难、自己的优势、缺点
+## 影响深刻的项目、或者困难、自己的优势、缺点
 
-# vue 生命周期、双向绑定原理、proxy， 数据劫持、vue2 和 vue3 的区别
+## vue 生命周期、双向绑定原理、proxy， 数据劫持、vue2 和 vue3 的区别
 
 - vue2 Object.defineProperty + 数据劫持
 
@@ -588,7 +589,7 @@ data.message = "New Vue3"; // 触发 set
 console.log(data.message); // 触发 get
 ```
 
-# 跨域和解决方案、同源策略以及其作用
+## 跨域和解决方案、同源策略以及其作用
 
 域（Cross-Origin）指的是浏览器阻止网页向不同源（不同协议、域名、端口）的服务器请求数据。
 
@@ -607,7 +608,7 @@ console.log(data.message); // 触发 get
 ✅ 生产环境 👉 使用 Nginx 代理
 ❌ 不要使用 JSONP，除非是老项目
 
-# 前端优化方案有哪些
+## 前端优化方案有哪些
 前端优化方案可以从多个方面进行，包括性能优化、代码优化、用户体验优化等。以下是常见的前端优化方案：
 
 1. 性能优化
@@ -641,7 +642,7 @@ CSP（内容安全策略）：防止 XSS 攻击。
 避免 CSRF：使用 SameSite Cookie、Token 验证。
 HTTPS 强制：防止中间人攻击，提高数据传输安全性。
 
-# call、apply、bind 如何手动实现
+## call、apply、bind 如何手动实现
 - 手写call
 ```js
 Function.prototype.myCall = function (context, ...args) {
@@ -699,13 +700,13 @@ boundGreet(35); // Hello, my name is Alice and I am 35 years old.
 | bind   | 否         | 逗号分隔参数  | 返回绑定 `this` 的新函数 |
 
 
-# 重绘和回流
+## 重绘和回流
 | 操作  | 影响范围      | 触发因素                  | 优化建议                         |
 |------|-------------|------------------------|-------------------------------|
 | 回流  | 影响整个布局  | 改变尺寸、位置、盒模型等  | 减少 DOM 操作，避免频繁修改布局 |
 | 重绘  | 只影响外观渲染 | 改变颜色、背景、不影响布局的属性 | 减少不必要的视觉变化           |
 
-# html5 的新特性和改进
+## html5 的新特性和改进
 | 特性         | 说明                                      |
 |-------------|-----------------------------------------|
 | 语义化标签  | `<header>`、`<section>`、`<article>` 等  |
@@ -718,7 +719,7 @@ boundGreet(35); // Hello, my name is Alice and I am 35 years old.
 | 文件 API    | 允许访问和读取本地文件                  |
 | 移动端优化  | 视口控制、触摸事件                      |
 
-# seo优化
+## seo优化
 
 | SEO 优化  | 关键点                                      |
 |----------|-------------------------------------------|
@@ -728,7 +729,7 @@ boundGreet(35); // Hello, my name is Alice and I am 35 years old.
 
 css 盒子模型
 css 的伪元素和伪类
-# 画三角形
+## 画三角形
 ```css
 // 使用border
 .triangle {
@@ -747,7 +748,7 @@ css 的伪元素和伪类
 }
 
 ```
-# 闭包和应用，以及内存泄漏,闭包的底层原理
+## 闭包和应用，以及内存泄漏,闭包的底层原理
 - 闭包 本质是函数 + 作用域链，应用场景包括 数据私有化、事件监听、定时器等。
 | 问题             | 解决方案                                |
 |----------------|-----------------------------------|
@@ -758,7 +759,7 @@ css 的伪元素和伪类
 | DOM 引用未释放   | `node.innerHTML = ""` 或 `node = null` |
 
 
-# 如何实现原型继承
+## 如何实现原型继承
 - 经典继承
 ```js
 function Parent() {
@@ -834,7 +835,7 @@ Child.prototype.constructor = Child; // 修正 constructor
 const child1 = new Child("Child1", 18);
 child1.sayHello(); // Hello from Parent
 ```
-# 事件委托的原理和优势，事件循环、宏任务、微任务
+## 事件委托的原理和优势，事件循环、宏任务、微任务
 - 事件委托是利用事件冒泡，将子元素的事件委托到父元素上，由父元素统一监听处理。
 | **概念**              | **说明**                                             |
 |----------------------|--------------------------------------------------|
@@ -844,7 +845,7 @@ child1.sayHello(); // Hello from Parent
 | **微任务（MicroTask）**  | `Promise.then`、`MutationObserver`、`queueMicrotask` |
 | **执行顺序**          | 先执行同步代码 → 再执行微任务 → 最后执行宏任务         |
 
-# css sprite 和网页字体图标有什么区别
+## css sprite 和网页字体图标有什么区别
 | **对比项**     | **CSS Sprite（雪碧图）**                 | **网页字体图标（Icon Font）**         |
 |--------------|----------------------------------|--------------------------------|
 | **使用方式**  | `background-image` + `background-position` | `font-family`                  |
@@ -867,7 +868,7 @@ child1.sayHello(); // Hello from Parent
 希望支持高清屏幕（Retina 屏）
 图标是矢量的，适合单色
 
-# 什么是虚拟 dom、与真实 dom 的区别
+## 什么是虚拟 dom、与真实 dom 的区别
 | **对比项**    | **虚拟 DOM（Virtual DOM）**     | **真实 DOM（Real DOM）**       |
 |-------------|--------------------------|--------------------------|
 | **本质**     | JS 对象，轻量级虚拟结构      | 浏览器中的 HTML 结构       |
@@ -881,7 +882,7 @@ cookie localStorage
 flex transform transition animation keyframe relative static fixed
 js 价格格式输入 1999999.99 输出 1，999，999.99
 await 输出一个 5 秒出发一个事件，async
-# promise 手动实现.all .race
+## promise 手动实现.all .race
 - all
 ```js
 Promise.myAll = function (promises) {
@@ -925,7 +926,7 @@ let p2 = new Promise((resolve) => setTimeout(() => resolve("慢的"), 1000));
 Promise.myRace([p1, p2]).then(console.log).catch(console.error);
 // 500ms 后输出: "快的"
 ```
-# foreach \ map \  reduce
+## foreach \ map \  reduce
 - foreach
 ```js
 Array.prototype.myForEach = function (callback, thisArg) {
@@ -984,7 +985,7 @@ let arr = [1, 2, 3, 4];
 let sum = arr.myReduce((acc, curr) => acc + curr, 0);
 console.log(sum); // 10
 ```
-# 深拷贝、浅拷贝
+## 深拷贝、浅拷贝
 - 浅拷贝
 ```js
 // Object.assign()
@@ -1023,12 +1024,12 @@ console.log(copy3); // { a: 1, b: { c: 2 }, d: [Function: d], self: [Circular] }
 ```
 
 变量对象、变量对象的创建过程
-# 如何实现图片懒加载
+## 如何实现图片懒加载
 ```html
 <img src="image.jpg" alt="示例图片" loading="lazy">
 ```
 
-# settimout 模拟实现 setinterval  - 如何真正实现 timout
+## settimout 模拟实现 setinterval  - 如何真正实现 timout
 ```js
 function mySetInterval(fn, delay) {
   let timer = null;
@@ -1054,7 +1055,7 @@ setTimeout(() => {
   console.log("Timer stopped");
 }, 5000);
 ```
-# 原型链和原型链继承
+## 原型链和原型链继承
 - 在 JavaScript 中，每个对象都有一个特殊的隐藏属性 [[Prototype]]（即 __proto__），指向其构造函数的原型对象（prototype），这形成了一条原型链（Prototype Chain）。
 当访问对象的属性或方法时：
 先查找自身属性
@@ -1062,7 +1063,7 @@ setTimeout(() => {
 直到 Object.prototype，找不到就返回 undefined
 
 
-# hasOwnProperty()
+## hasOwnProperty()
 - hasOwnProperty() 是 Object.prototype 上的一个方法，用于检查对象自身是否具有某个自有属性（不会检查原型链上的属性）。
 
 margin 重叠
@@ -1073,7 +1074,7 @@ tree shaking 和 code splitting
 valueof
 手动实现双向数据绑定
 数组 flat 方法
-# 手写 object.create
+## 手写 object.create
 ```js
 function myObjectCreate(proto, propertiesObject) {
   if (typeof proto !== "object" && proto !== null) {
@@ -1090,7 +1091,7 @@ function myObjectCreate(proto, propertiesObject) {
 }
 ```
 
-# 实现发布-订阅模式
+## 实现发布-订阅模式
 ```js
 class EventEmitter {
   constructor() {
@@ -1125,7 +1126,7 @@ class EventEmitter {
   }
 }
 ```
-# 手写 new 操作符
+## 手写 new 操作符
 📌 1. new 关键字的执行步骤
 创建一个新对象
 将这个对象的 __proto__ 指向构造函数的 prototype
@@ -1162,7 +1163,7 @@ function myInstanceOf(obj, Constructor) {
 console.log(myInstanceOf(p1, Person)); // true
 ```
 
-# diff 算法
+## diff 算法
 📌 3. Vue 列表 Diff（核心优化）
 Vue 采用“双端 Diff”策略：
 
@@ -1181,11 +1182,11 @@ function patch(oldVNode, newVNode) {
   }
 }
 ```
-# nextTick 原理
+## nextTick 原理
 nextTick 主要用于 在 DOM 更新完成后执行回调，常用于获取最新 DOM 状态。Vue 异步更新 DOM，所以 nextTick 解决了数据变化后，获取到的 DOM 还未更新的问题。
 vuex vue 响应式原理
 首屏加载优化
-# vue-cli 手动实现脚手架
+## vue-cli 手动实现脚手架
 ✅ 使用 commander.js 解析命令
 ✅ 使用 inquirer.js 交互选择 Vue 版本
 ✅ 使用 download-git-repo 下载模板
@@ -1200,7 +1201,7 @@ vuex vue 响应式原理
 获取随机值
 类、抽象类、接口
 promise 语法糖
-# hash 和 history 模式
+## hash 和 history 模式
 | 对比项       | Hash 模式                           | History 模式                         |
 |------------|---------------------------------|---------------------------------|
 | **URL 形式** | `http://example.com/#/home`    | `http://example.com/home`      |
@@ -1210,7 +1211,7 @@ promise 语法糖
 | **页面刷新** | ✅ 正常工作                     | ❌ 需要服务器配置，否则 404   |
 | **使用场景** | 无需服务器支持的 SPA            | 需要 SEO、优化 URL 的应用      |
 
-# for in for of
+## for in for of
 | 对比项       | `for...in`                          | `for...of`                          |
 |------------|---------------------------------|--------------------------------|
 | **适用范围** | **对象、数组、字符串**         | **数组、字符串、Map、Set、迭代器** |
@@ -1221,7 +1222,7 @@ promise 语法糖
 | **是否可用于 Map/Set** | ❌ 不可直接用于 Map/Set        | ✅ 可用于 Map/Set              |
 | **适用场景** | 遍历对象属性、数组索引           | 遍历数组、字符串、迭代对象      |
 
-# 箭头函数为什么不能 new，程序不会给箭头函数创建 args 对象
+## 箭头函数为什么不能 new，程序不会给箭头函数创建 args 对象
 - 箭头函数不能作为构造函数，因为它没有自己的 this，也没有 prototype，所以无法使用 new 关键字来实例化对象。
 🔹 1. new 关键字的工作原理
   当使用 new 关键字调用一个函数时，会发生以下步骤：
@@ -1237,7 +1238,7 @@ promise 语法糖
 new 需要创建一个新的 this，但箭头函数的 this 继承自外层作用域，无法被改变。
 - 箭头函数没有 arguments  解决方法：用 rest 参数 获取参数    (...args) => 
 
-# 进程、线程
+## 进程、线程
 | **对比项**  | **进程（Process）**                  | **线程（Thread）**                 |
 |------------|--------------------------------|--------------------------------|
 | **定义**   | **程序的执行实例**，拥有独立的内存空间 | **进程中的执行单元**，共享进程资源 |
@@ -1253,7 +1254,7 @@ new 需要创建一个新的 this，但箭头函数的 this 继承自外层作�
 - **线程示例**：浏览器中的 JavaScript 运行在 **单线程** 模式下
 
 
-# setTimout 、promise、async/await 执行顺序
+## setTimout 、promise、async/await 执行顺序
 ```js
 # **📌 setTimeout、Promise、async/await 执行顺序**
 
@@ -1295,7 +1296,7 @@ DOM ccssdom render tree
 requestAnimationFrame、setTimeout、setImmediate
 如何优化 for 循环的性能
 compositiion API 和 optionAPI
-# 为什么 vite 比 webpack 快
+## 为什么 vite 比 webpack 快
 1. Vite 利用了 ES 模块（ESM）
 Webpack：需要 打包所有依赖 后再启动，初始构建慢。
 Vite：使用 原生 ES 模块，仅按需加载文件，启动速度快。
@@ -1311,7 +1312,7 @@ Vite 使用 Esbuild（用 Go 语言编写）预构建依赖，而 Webpack 使用
 | 生产环境     | ✅ Tree-shaking       | ✅ Rollup 构建               |
 | 适用场景     | 适合大型复杂项目       | 适合前端开发和轻量项目       |
 
-# vue3 和 vue2
+## vue3 和 vue2
 
 | 优化点       | Vue 2（慢）                    | Vue 3（快）                       |
 |-------------|-----------------------------|--------------------------------|
