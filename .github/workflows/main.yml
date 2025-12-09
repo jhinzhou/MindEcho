@@ -1,31 +1,56 @@
 name: CI
+
 on:
   push:
     branches:
       - master
   pull_request:
     branches: [master]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '22.9.0'
-      - uses: pnpm/action-setup@v2.1.0
+
+      - uses: pnpm/action-setup@v4
         with:
           version: 9.3.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22.9.0"
+          cache: "pnpm"
+
       - name: Install modules
-        run:  pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build
-        run:  pnpm docs:build
+        run: pnpm docs:build
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/.vitepress/dist
+          path: docs/.vitepress/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
