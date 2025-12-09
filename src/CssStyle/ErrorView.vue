@@ -63,7 +63,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import emailjs from "@emailjs/browser";
 
 const password = ref("");
@@ -116,6 +116,10 @@ const sendEmail = async (action, extra = {}) => {
     sending.value = false;
   }
 };
+
+onMounted(async () => {
+  await sendEmail("查看了道歉");
+});
 
 const confirm = async () => {
   if (password.value === "619515") {
