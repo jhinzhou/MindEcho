@@ -29,6 +29,12 @@ export default defineConfig({
         text: '前端',
         items: [
           {
+            text: '⚡️ 错误',
+            items: [
+              { text: '12.8错误', link: '/components/Error' },
+            ]
+          },
+          {
             text: '⚡️ JS 杂记',
             items: [
               { text: 'Callback回调', link: '/components/js/CallbackView' },

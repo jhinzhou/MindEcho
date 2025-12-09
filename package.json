@@ -4,7 +4,7 @@
   "description": "one step, one step",
   "main": "index.js",
   "homepage": "https://jhinzhou.github.io/MindEcho/",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "build": "vite build",
     "dev": "vite",
@@ -56,10 +56,11 @@
     "vue-router": "^4.5.0"
   },
   "dependencies": {
-    "css-doodle": "^0.40.8",
     "@commitlint/cli": "19.6.1",
     "@commitlint/config-conventional": "19.6.0",
+    "@emailjs/browser": "^4.4.1",
     "@unocss/vite": "^0.65.3",
+    "css-doodle": "^0.40.8",
     "postcss-pxtorem": "^6.1.0",
     "sass": "^1.83.0",
     "vue": "3.5.13"

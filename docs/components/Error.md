@@ -1,0 +1,3 @@
+<div>
+    <ErrorView />
+</div>
