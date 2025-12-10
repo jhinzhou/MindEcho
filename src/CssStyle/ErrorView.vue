@@ -2,7 +2,7 @@
   <div class="page">
     <div class="card">
       <h1 class="title">给最好看的你</h1>
-      <p class="subtitle">输入我们的密码，看看我真诚的道歉</p>
+      <p class="subtitle">输入我们的密码，查看我的汇报</p>
       <div class="form">
         <input
           v-model="password"
@@ -16,19 +16,20 @@
       <transition name="fade-slide">
         <div v-if="canSee" class="letter-block">
           <div class="letter">
-            <p>我为12月8日晚的态度，向你真诚的道歉。</p>
-            <p>错误在我，对不起。</p>
-            <p>我为我的愚蠢行为再次向你道歉，对不起。</p>
-            <p>下班的时候一路上还在想着我们以后幸福三口。</p>
-            <p>回来后却是这个样子，心里落差太大。</p>
-            <p>对不起，没有及时向你道歉，对不起。</p>
-            <p>你删掉我后，我心很痛，这不是我想要的结果。</p>
-            <p>对不起，对不起。</p>
-            <p>我冷静了很久，我要向你道歉。</p>
-            <p>我有很多问题，我都在慢慢去改了。</p>
-            <p>是我做的不好，不到位，对不起。</p>
-            <p>希望你能原谅我。</p>
-            <p>希望你给个机会让我努力做个合格的爸爸。</p>
+            <p>昨天组织架构调整，新来的领导将管理前后端和测试。</p>
+            <p>后续不分前后端，都要会写前端和后端。</p>
+            <p>规定要在春节前完成前后端都会写。</p>
+            <p>后续要统计每个人的bug数以及任务数。</p>
+            <p>要看谁的bug最多。</p>
+            <p>后续的日子估计不好过啦。</p>
+            <p>下午2点，新来的领导要开会，不知道开多久。</p>
+            <p>整个部门所有人，估计是要新官上任吧。</p>
+            <p>上周的分享会他还说，宜家这么大的公司居然愿意和我们合作，他看了一下系统，比他想象的还要简单，他带的团队，他要让团队的能力要能匹配上宜家这个位置等等。</p>
+            <p>慢慢熬吧，实在后续呆的不好再换吧。</p>
+            <p>不过不用担心，我会一直努力的。</p>
+            <p>会让你们过上好日子的。</p>
+            <p>会逐渐富有的。</p>
+            <p>我会一直努力的。</p>
           </div>
           <div class="actions">
             <button class="pill-btn pill-positive" @click="handleForgive">
@@ -40,10 +41,26 @@
             <button class="pill-btn pill-danger" @click="handleKillYou">
               打死我 {{ killYouCount > 0 ? "+" + killYouCount : "" }}
             </button>
+            <button class="pill-btn pill-positive" @click="handleBehaviour">
+              看表现 {{ behaviourCount > 0 ? "+" + behaviourCount : "" }}
+            </button>
           </div>
         </div>
       </transition>
-
+      <div class="couple-scene">
+        <div class="path">
+          <div class="person person-left">
+            <div class="head"></div>
+            <div class="body"></div>
+            <div class="arm arm-right"></div>
+          </div>
+          <div class="person person-right">
+            <div class="head"></div>
+            <div class="body"></div>
+            <div class="arm arm-left"></div>
+          </div>
+        </div>
+      </div>
       <div class="rose-wrapper">
         <div class="rose">
           <div class="petal petal-1"></div>
@@ -71,6 +88,7 @@ const canSee = ref(false);
 const forgiveCount = ref(0);
 const notForgiveCount = ref(0);
 const killYouCount = ref(0);
+const behaviourCount = ref(0);
 const sending = ref(false);
 
 const emailConfig = {
@@ -142,6 +160,10 @@ const handleNotForgive = async () => {
 const handleKillYou = async () => {
   killYouCount.value++;
   await sendEmail("打死你");
+};
+const handleBehaviour = async () => {
+  behaviourCount.value++;
+  await sendEmail("看表现");
 };
 </script>
 
@@ -476,6 +498,105 @@ const handleKillYou = async () => {
   filter: blur(8px);
   z-index: -1;
   animation: glow 5s ease-in-out infinite;
+}
+
+/* Couple + Sun Scene */
+.couple-scene {
+  position: relative;
+  height: 140px;
+  margin-top: -40px;
+  z-index: 3;
+  overflow: visible;
+}
+
+.rose {
+  position: relative;
+  width: 140px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 4.2s ease-in-out infinite, rose-move 0.6s 4.5s forwards ease-out;
+  transform-origin: center bottom;
+}
+
+.couple-scene .path {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 120px;
+}
+
+.person {
+  position: absolute;
+  bottom: -6px;
+  width: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.person .head {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #ffdcb3;
+  margin-bottom: 6px;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.08);
+}
+
+.person .body {
+  width: 22px;
+  height: 44px;
+  border-radius: 8px;
+  background: linear-gradient(180deg,#ff9aa8,#ff607a);
+}
+
+.person .arm {
+  position: absolute;
+  top: 36px;
+  width: 34px;
+  height: 6px;
+  background: #ffdcb3;
+  border-radius: 6px;
+}
+
+.person-left { left: -120px; animation: walk-left 4s forwards ease-in-out; }
+.person-right { right: -120px; animation: walk-right 4s forwards ease-in-out; }
+
+.person-left .arm { right: -12px; transform: translateX(0) rotate(0deg); animation: arm-reach 0.9s 3.6s forwards ease-out; }
+.person-right .arm { left: -12px; transform: translateX(0) rotate(0deg); animation: arm-reach-right 0.9s 3.6s forwards ease-out; }
+
+@keyframes walk-left {
+  0% { left: -120px; }
+  100% { left: calc(50% - 74px); }
+}
+
+@keyframes walk-right {
+  0% { right: -120px; }
+  100% { right: calc(50% - 74px); }
+}
+
+@keyframes arm-reach {
+  0% { transform: translateX(0) rotate(0deg); }
+  100% { transform: translateX(38px) rotate(8deg); }
+}
+
+@keyframes arm-reach-right {
+  0% { transform: translateX(0) rotate(0deg); }
+  100% { transform: translateX(-38px) rotate(-8deg); }
+}
+
+@keyframes sun-rise {
+  0% { transform: translateY(40px) scale(0.9); opacity: 0; }
+  100% { transform: translateY(-28px) scale(1); opacity: 1; }
+}
+
+@keyframes rose-move {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-98px) scale(0.6); }
 }
 
 @keyframes bloom {
