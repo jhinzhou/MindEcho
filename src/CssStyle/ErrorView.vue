@@ -2,17 +2,20 @@
   <div class="page">
     <div class="card">
       <h1 class="title">给最好看的你</h1>
-      <p class="subtitle">输入我们的密码，查看我的汇报</p>
-      <div class="form">
-        <input
-          v-model="password"
-          type="password"
-          class="input-custom"
-          placeholder="请输入密码"
-        />
-        <button class="confirm-btn" @click="confirm">开始查看</button>
+      <div class="couple-scene">
+        <div class="path">
+          <div class="person person-left">
+            <div class="head"></div>
+            <div class="body"></div>
+            <div class="arm arm-right"></div>
+          </div>
+          <div class="person person-right">
+            <div class="head"></div>
+            <div class="body"></div>
+            <div class="arm arm-left"></div>
+          </div>
+        </div>
       </div>
-
       <transition name="fade-slide">
         <div v-if="canSee" class="letter-block">
           <div class="letter">
@@ -47,20 +50,7 @@
           </div>
         </div>
       </transition>
-      <div class="couple-scene">
-        <div class="path">
-          <div class="person person-left">
-            <div class="head"></div>
-            <div class="body"></div>
-            <div class="arm arm-right"></div>
-          </div>
-          <div class="person person-right">
-            <div class="head"></div>
-            <div class="body"></div>
-            <div class="arm arm-left"></div>
-          </div>
-        </div>
-      </div>
+      
       <div class="rose-wrapper">
         <div class="rose">
           <div class="petal petal-1"></div>
@@ -84,7 +74,7 @@ import { onMounted, ref } from "vue";
 import emailjs from "@emailjs/browser";
 
 const password = ref("");
-const canSee = ref(false);
+const canSee = ref(true);
 const forgiveCount = ref(0);
 const notForgiveCount = ref(0);
 const killYouCount = ref(0);
@@ -136,18 +126,8 @@ const sendEmail = async (action, extra = {}) => {
 };
 
 onMounted(async () => {
-  await sendEmail("查看了道歉");
+  await sendEmail("查看了汇报");
 });
-
-const confirm = async () => {
-  if (password.value === "619515") {
-    canSee.value = true;
-    await sendEmail(`查看了,密码对了： ${password.value}`, { password: password.value });
-  } else {
-    alert("密码错误");
-    await sendEmail(`查看了,但是密码错了： ${password.value}`, { password: password.value });
-  }
-};
 
 const handleForgive = async () => {
   forgiveCount.value++;
