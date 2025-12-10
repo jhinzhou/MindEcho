@@ -2,6 +2,7 @@
   <div class="page">
     <div class="card">
       <h1 class="title">给最好看的你</h1>
+      <p class="subtitle">会不定期更新的哦</p>
       <div class="couple-scene">
         <div class="path">
           <div class="person person-left">
@@ -19,20 +20,16 @@
       <transition name="fade-slide">
         <div v-if="canSee" class="letter-block">
           <div class="letter">
-            <p>昨天组织架构调整，新来的领导将管理前后端和测试。</p>
-            <p>后续不分前后端，都要会写前端和后端。</p>
-            <p>规定要在春节前完成前后端都会写。</p>
-            <p>后续要统计每个人的bug数以及任务数。</p>
-            <p>要看谁的bug最多。</p>
-            <p>后续的日子估计不好过啦。</p>
-            <p>下午2点，新来的领导要开会，不知道开多久。</p>
-            <p>整个部门所有人，估计是要新官上任吧。</p>
-            <p>上周的分享会他还说，宜家这么大的公司居然愿意和我们合作，他看了一下系统，比他想象的还要简单，他带的团队，他要让团队的能力要能匹配上宜家这个位置等等。</p>
-            <p>慢慢熬吧，实在后续呆的不好再换吧。</p>
-            <p>不过不用担心，我会一直努力的。</p>
-            <p>会让你们过上好日子的。</p>
-            <p>会逐渐富有的。</p>
-            <p>我会一直努力的。</p>
+            <p>后续每天都不能迟到</p>
+            <p>从今天开始我要调整作息了</p>
+            <p>11点睡觉，7点起床</p>
+            <p>宝贝你也早点睡觉，不要熬夜，不劳累</p>
+            <p>记得坚持使用大白罐</p>
+            <p>今天又开了一下午的会议，说什么打造成一流团队</p>
+            <p>说什么不会有太多变化，现在又搞很多东西</p>
+            <p>越来越接近瑞云的开发模式了，几乎是一模一样了</p>
+            <p>刚才还在写明早早会要发言的内容</p>
+            <p>先更新到这里</p>
           </div>
           <div class="actions">
             <button class="pill-btn pill-positive" @click="handleForgive">
