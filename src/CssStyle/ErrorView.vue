@@ -10,10 +10,23 @@
             <div class="body"></div>
             <div class="arm arm-right"></div>
           </div>
-          <div class="person person-right">
-            <div class="head"></div>
-            <div class="body"></div>
-            <div class="arm arm-left"></div>
+          <div class="car-wrapper">
+            <div class="car" aria-hidden="true">
+              <div class="car-body">
+                <div class="car-top"></div>
+                <div class="car-window"></div>
+                <div class="driver-head"></div>
+                <div class="wheel wheel-back"></div>
+                <div class="wheel wheel-front"></div>
+                <div class="light light-back"></div>
+                <div class="light light-front"></div>
+              </div>
+            </div>
+            <div class="person person-right hidden-person">
+              <div class="head"></div>
+              <div class="body"></div>
+              <div class="arm arm-left"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -21,23 +34,15 @@
         <div v-if="canSee" class="letter-block">
           <div class="letter">
             <p>亲爱的宝贝：</p>
-            <p>我给你打电话了，能解除拉黑吗</p>
-            <p>又个新微信加你了，能通过一下吗</p>
-            <p>小西柚的抖音也找你了，能回我一下吗</p>
-            <p>还给你发了邮件，能回复一下吗</p>
-            <p>摄像头我以及绑定上去了，你能看到小西柚了</p>
-            <p>今天有点忙，一直在处理各种问题</p>
-            <p>现在每天都有明确的任务要做</p>
-            <p>本来上班挺早的，但是还是迟了点下班</p>
-            <p>我买了个胎心检测仪，这两天就到了</p>
-            <p>你有个极兔快递，你还没拿，要记得拿</p>
-            <p>你的肚子还疼吗，别生气了可以嘛</p>
-            <p>对不起</p>
-            <p>代码编译，提交，更新需要时间，这里更新会慢点</p>
-            <p>为了保证你能点击看到，我一般会标记上一次的更新时间</p>
-            <p>网站不会自动刷新，需要手动点击刷新获取最新的</p>
-            <p>上次更新 2025.12.11 18:18</p>
-            <p>本次更新 2025.12.11 21:30</p>
+            <p>早点睡觉</p>
+            <p>不要熬夜</p>
+            <p>是我让你心情不愉快了，对不起</p>
+            <p>想到你生气，心情不好，憋在心里</p>
+            <p>越想心里越痛，对不起</p>
+            <p>我会好好反思自己，希望宽大处理</p>
+            <p>早点睡吧，今晚没有更新了，晚安</p>
+            <p>上次更新 2025.12.11 21:30</p>
+            <p>本次更新 2025.12.11 23:45</p>
           </div>
           <div class="actions">
             <button class="pill-btn pill-positive" @click="handleForgive">
@@ -549,7 +554,26 @@ const handleBehaviour = async () => {
 }
 
 .person-left { left: -120px; animation: walk-left 4s forwards ease-in-out; }
-.person-right { right: -120px; animation: walk-right 4s forwards ease-in-out; }
+
+/* car + reveal right-person */
+.car-wrapper { position: absolute; right: 0; bottom: 0; width: 220px; height: 120px; pointer-events: none; }
+.car { position: absolute; right: -160px; bottom: 6px; width: 140px; height: 68px; display:flex; align-items:flex-end; justify-content:center; animation: drive-in 3.9s forwards ease-in-out; transform-origin: center; filter: drop-shadow(0 10px 18px rgba(20,40,80,0.45)); }
+.car-body { position: relative; width: 116px; height: 44px; background: linear-gradient(180deg,#ff6b6b,#d93535); border-radius: 12px 18px 14px 14px; box-shadow: inset 0 -4px 0 rgba(0,0,0,0.12); }
+.car-top { position: absolute; width: 78px; height: 32px; background: linear-gradient(180deg,#ffd4d4,#ff9ba9); border-radius: 16px 16px 10px 10px; left: 24px; top: -22px; box-shadow: 0 4px 0 rgba(0,0,0,0.08); }
+.car-window { position: absolute; width: 60px; height: 22px; background: linear-gradient(180deg,#eaf7ff,#cfe6ff); border-radius: 8px; left: 30px; top: -18px; box-shadow: inset 0 0 0 2px rgba(255,255,255,0.45); overflow: hidden; }
+.car-window::after { content: ""; position: absolute; right: 6px; top: 0; bottom: 0; width: 10px; background: linear-gradient(180deg,rgba(0,0,0,0.08),rgba(0,0,0,0.02)); }
+.driver-head { position: absolute; left: 48px; top: -10px; width: 18px; height: 18px; border-radius: 50%; background: #ffdcb3; border: 2px solid #f4c08f; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
+.wheel { position: absolute; bottom: -14px; width: 26px; height: 26px; background: #0f172a; border-radius: 50%; box-shadow: inset 0 0 0 4px #1f2937, 0 4px 8px rgba(0,0,0,0.28); }
+.wheel::after { content: ""; position: absolute; inset: 5px; border-radius: 50%; background: radial-gradient(circle,#d9dde7 0%,#9aa0ad 65%,#5a6070 100%); }
+.wheel-back { left: 14px; }
+.wheel-front { right: 14px; }
+.light { position: absolute; top: 14px; width: 12px; height: 6px; border-radius: 4px; }
+.light-front { right: -10px; background: linear-gradient(90deg,#ffef9f,#ffd166); box-shadow: 0 0 8px rgba(255,209,102,0.8); }
+.light-back { left: -10px; background: linear-gradient(90deg,#ff6b6b,#ff9a9a); box-shadow: 0 0 6px rgba(255,107,107,0.7); }
+
+.hidden-person { opacity: 0; transform: translateY(6px) scale(0.98); animation: person-reveal 0.28s 3.9s forwards ease-out; }
+
+.person-right { right: calc(50% - 74px); }
 
 .person-left .arm { right: -12px; transform: translateX(0) rotate(0deg); animation: arm-reach 0.9s 3.6s forwards ease-out; }
 .person-right .arm { left: -12px; transform: translateX(0) rotate(0deg); animation: arm-reach-right 0.9s 3.6s forwards ease-out; }
@@ -582,6 +606,17 @@ const handleBehaviour = async () => {
 @keyframes rose-move {
   0% { transform: translateY(0) scale(1); }
   100% { transform: translateY(-98px) scale(0.6); }
+}
+
+@keyframes drive-in {
+  0% { right: -160px; transform: translateX(0) scale(1); opacity: 1; }
+  80% { right: calc(50% - 74px); opacity: 1; }
+  100% { right: calc(50% - 74px); transform: scale(0.7); opacity: 0; }
+}
+
+@keyframes person-reveal {
+  0% { opacity: 0; transform: translateY(6px) scale(0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 @keyframes bloom {
