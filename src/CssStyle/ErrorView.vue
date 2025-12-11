@@ -21,12 +21,16 @@
         <div v-if="canSee" class="letter-block">
           <div class="letter">
             <p>亲爱的宝贝：</p>
-            <p>首先，非常感谢你还在关注着这个网站。我知道，最近的我可能让你感到失望和伤心，为此我深感抱歉。</p>
-            <p>在过去的日子里，我意识到自己在很多方面都做得不够好，尤其是在沟通和理解你的需求上。</p>
-            <p>我承认自己的错误，并且真心希望能够慢慢变得更好。</p>
-            <p>我想让你知道，你对我来说是多么重要。我愿意为我们的未来努力，变得更好，更加体贴和关心你。</p>
-            <p>永远爱你</p>
-            <p>2025.12.11 14:13</p>
+            <p>又过了好几个小时了</p>
+            <p>边写代码的时候边心神不宁</p>
+            <p>我只能在这里和你说对不起</p>
+            <p>我没和你说实话</p>
+            <p>我是故意呆在车里的</p>
+            <p>然后我会看家里的摄像头</p>
+            <p>我想看到你在乎我</p>
+            <p>对不起，我给你造成了难过和困扰</p>
+            <p>上次更新 2025.12.11 14:13</p>
+            <p>本次更新 2025.12.11 18:18</p>
           </div>
           <div class="actions">
             <button class="pill-btn pill-positive" @click="handleForgive">
@@ -120,7 +124,7 @@ const sendEmail = async (action, extra = {}) => {
 };
 
 onMounted(async () => {
-  await sendEmail("查看了汇报");
+  await sendEmail("查看了汇报12.11");
 });
 
 const handleForgive = async () => {
