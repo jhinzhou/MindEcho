@@ -42,7 +42,7 @@
             <p>我会好好反思自己，希望宽大处理</p>
             <p>早点睡吧，今晚没有更新了，晚安</p>
             <p>上次更新 2025.12.11 21:30</p>
-            <p>本次更新 2025.12.11 23:45</p>
+            <p>本次更新 2025.12.11 23:59</p>
           </div>
           <div class="actions">
             <button class="pill-btn pill-positive" @click="handleForgive">
@@ -136,7 +136,7 @@ const sendEmail = async (action, extra = {}) => {
 };
 
 onMounted(async () => {
-  await sendEmail("查看了汇报12.11");
+  await sendEmail("查看了汇报12.12.01");
 });
 
 const handleForgive = async () => {
