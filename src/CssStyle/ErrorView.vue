@@ -5,10 +5,15 @@
       <p class="subtitle">会不定期更新的哦</p>
       <div class="couple-scene">
         <div class="path">
-          <div class="person person-left">
+          <div class="person person-left person-sleeping">
             <div class="head"></div>
             <div class="body"></div>
             <div class="arm arm-right"></div>
+            <div class="sleeping-indicator">
+              <div class="zzz zzz-1">Z</div>
+              <div class="zzz zzz-2">z</div>
+              <div class="zzz zzz-3">z</div>
+            </div>
           </div>
           <div class="car-wrapper">
             <div class="car" aria-hidden="true">
@@ -22,11 +27,23 @@
                 <div class="light light-front"></div>
               </div>
             </div>
-            <div class="person person-right hidden-person">
+            <div class="person person-right person-outside hidden-person">
               <div class="head"></div>
               <div class="body"></div>
               <div class="arm arm-left"></div>
             </div>
+          </div>
+          <div class="sun-7am" v-if="showSun">
+            <div class="sun-circle"></div>
+            <div class="sun-rays"></div>
+          </div>
+          <div class="moon-fade" v-if="showSun">
+            <div class="moon-circle"></div>
+          </div>
+          <div class="heart-kiss" v-if="showHeart">
+            <div class="heart heart-1">💕</div>
+            <div class="heart heart-2">💕</div>
+            <div class="heart heart-3">💕</div>
           </div>
         </div>
       </div>
@@ -34,15 +51,12 @@
         <div v-if="canSee" class="letter-block">
           <div class="letter">
             <p>亲爱的宝贝：</p>
-            <p>早点睡觉</p>
-            <p>不要熬夜</p>
-            <p>是我让你心情不愉快了，对不起</p>
-            <p>想到你生气，心情不好，憋在心里</p>
-            <p>越想心里越痛，对不起</p>
-            <p>我会好好反思自己，希望宽大处理</p>
-            <p>早点睡吧，今晚没有更新了，晚安</p>
-            <p>上次更新 2025.12.11 21:30</p>
-            <p>本次更新 2025.12.11 23:59</p>
+            <p>今天要提测下周一的一些任务</p>
+            <p>会比较忙</p>
+            <p>更新的会慢一点</p>
+            <p>好好休息</p>
+            <p>上次更新 2025.12.11 23:59</p>
+            <p>本次更新 2025.12.12 11:36</p>
           </div>
           <div class="actions">
             <button class="pill-btn pill-positive" @click="handleForgive">
@@ -90,6 +104,8 @@ const notForgiveCount = ref(0);
 const killYouCount = ref(0);
 const behaviourCount = ref(0);
 const sending = ref(false);
+const showHeart = ref(false);
+const showSun = ref(false);
 
 const emailConfig = {
   serviceId: "service_z1h5jyl",
@@ -136,7 +152,15 @@ const sendEmail = async (action, extra = {}) => {
 };
 
 onMounted(async () => {
-  await sendEmail("查看了汇报12.12.01");
+  await sendEmail("查看了汇报12.12.02");
+  // 两个小人牵手时同时显示太阳和月亮（约4.3秒）
+  setTimeout(() => {
+    showSun.value = true;
+  }, 4300);
+  // 两个小人牵手后显示爱心（动画完成后约5.2秒）
+  setTimeout(() => {
+    showHeart.value = true;
+  }, 5200);
 });
 
 const handleForgive = async () => {
@@ -553,7 +577,17 @@ const handleBehaviour = async () => {
   border-radius: 6px;
 }
 
-.person-left { left: -120px; animation: walk-left 4s forwards ease-in-out; }
+.person-left { 
+  left: calc(50% - 48px);
+  bottom: -6px;
+  transform: rotate(-15deg);
+  transform-origin: bottom center;
+  animation: wake-up-left 0.5s 3.8s forwards ease-out;
+}
+
+.person-sleeping {
+  position: absolute;
+}
 
 /* car + reveal right-person */
 .car-wrapper { position: absolute; right: 0; bottom: 0; width: 220px; height: 120px; pointer-events: none; }
@@ -571,29 +605,201 @@ const handleBehaviour = async () => {
 .light-front { right: -10px; background: linear-gradient(90deg,#ffef9f,#ffd166); box-shadow: 0 0 8px rgba(255,209,102,0.8); }
 .light-back { left: -10px; background: linear-gradient(90deg,#ff6b6b,#ff9a9a); box-shadow: 0 0 6px rgba(255,107,107,0.7); }
 
-.hidden-person { opacity: 0; transform: translateY(6px) scale(0.98); animation: person-reveal 0.28s 3.9s forwards ease-out; }
+.hidden-person { 
+  opacity: 0; 
+  transform: scale(0.98); 
+}
 
-.person-right { right: calc(50% - 74px); }
+.sleeping-indicator {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 4px;
+  animation: hide-snore 0.1s 3.8s forwards;
+  z-index: 10;
+}
 
-.person-left .arm { right: -12px; transform: translateX(0) rotate(0deg); animation: arm-reach 0.9s 3.6s forwards ease-out; }
-.person-right .arm { left: -12px; transform: translateX(0) rotate(0deg); animation: arm-reach-right 0.9s 3.6s forwards ease-out; }
+.person-outside {
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  animation: person-reveal 0.28s 3.9s forwards ease-out;
+}
+
+.person-right { 
+  left: 50%;
+  bottom: -6px;
+}
+
+.zzz {
+  font-size: 16px;
+  font-weight: bold;
+  color: #94a3b8;
+  opacity: 0;
+  animation: snore 2s infinite;
+}
+
+.zzz-1 {
+  animation-delay: 0s;
+  transform: translateY(0) rotate(-10deg);
+}
+
+.zzz-2 {
+  animation-delay: 0.3s;
+  transform: translateY(-8px) rotate(5deg);
+}
+
+.zzz-3 {
+  animation-delay: 0.6s;
+  transform: translateY(-16px) rotate(-5deg);
+}
+
+.sun-7am {
+  position: absolute;
+  left: 5%;
+  bottom: 15%;
+  width: 50px;
+  height: 50px;
+  pointer-events: none;
+  z-index: 1;
+  animation: sun-appear 0.8s 0s ease-out forwards;
+  opacity: 0;
+}
+
+.sun-circle {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffeb3b, #ffc107);
+  box-shadow: 0 0 15px rgba(255, 235, 59, 0.5);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sun-rays {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.sun-rays::before,
+.sun-rays::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffeb3b;
+  border-radius: 1px;
+  opacity: 0.6;
+}
+
+.sun-rays::before {
+  width: 2px;
+  height: 100%;
+}
+
+.sun-rays::after {
+  width: 100%;
+  height: 2px;
+}
+
+.moon-fade {
+  position: absolute;
+  right: 8%;
+  top: 15%;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  z-index: 1;
+  animation: moon-fade-in-out 3s 0s ease-in-out infinite;
+  opacity: 0;
+}
+
+.moon-circle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 60% 40%, #e8eaf6, #c5cae9);
+  box-shadow: 0 0 10px rgba(200, 200, 255, 0.3);
+  overflow: hidden;
+}
+
+.moon-circle::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--bg);
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.heart-kiss {
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.heart {
+  position: absolute;
+  font-size: 28px;
+  animation: heart-float 2s ease-out infinite;
+  opacity: 0;
+}
+
+.heart-1 {
+  left: -20px;
+  animation-delay: 0s;
+  animation-duration: 2s;
+}
+
+.heart-2 {
+  left: 0;
+  animation-delay: 0.2s;
+  animation-duration: 2.2s;
+}
+
+.heart-3 {
+  left: 20px;
+  animation-delay: 0.4s;
+  animation-duration: 2.4s;
+}
+
+.person-left .arm-right { right: -12px; transform: translateX(0) rotate(0deg); animation: arm-reach-right 0.9s 4.3s forwards ease-out; }
+.person-right .arm-left { left: -12px; transform: translateX(0) rotate(0deg); animation: arm-reach-left 0.9s 4.3s forwards ease-out; }
 
 @keyframes walk-left {
   0% { left: -120px; }
-  100% { left: calc(50% - 74px); }
+  100% { left: calc(50% - 48px); }
 }
 
 @keyframes walk-right {
   0% { right: -120px; }
-  100% { right: calc(50% - 74px); }
+  100% { left: calc(50% + 24px); }
 }
 
-@keyframes arm-reach {
+@keyframes arm-reach-right {
   0% { transform: translateX(0) rotate(0deg); }
   100% { transform: translateX(38px) rotate(8deg); }
 }
 
-@keyframes arm-reach-right {
+@keyframes arm-reach-left {
   0% { transform: translateX(0) rotate(0deg); }
   100% { transform: translateX(-38px) rotate(-8deg); }
 }
@@ -603,20 +809,68 @@ const handleBehaviour = async () => {
   100% { transform: translateY(-28px) scale(1); opacity: 1; }
 }
 
+@keyframes sun-appear {
+  0% { opacity: 0; transform: scale(0.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes moon-fade-in-out {
+  0%, 100% { opacity: 0.3; transform: scale(0.9); }
+  50% { opacity: 0.6; transform: scale(1); }
+}
+
 @keyframes rose-move {
   0% { transform: translateY(0) scale(1); }
   100% { transform: translateY(-98px) scale(0.6); }
 }
 
+@keyframes wake-up-left {
+  0% { transform: rotate(-15deg); }
+  100% { transform: rotate(0deg); }
+}
+
 @keyframes drive-in {
   0% { right: -160px; transform: translateX(0) scale(1); opacity: 1; }
-  80% { right: calc(50% - 74px); opacity: 1; }
-  100% { right: calc(50% - 74px); transform: scale(0.7); opacity: 0; }
+  80% { right: calc(50% - 48px); opacity: 1; }
+  100% { right: calc(50% - 48px); transform: scale(0.7); opacity: 0; }
 }
 
 @keyframes person-reveal {
-  0% { opacity: 0; transform: translateY(6px) scale(0.98); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
+  0% { opacity: 0; transform: scale(0.98); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes snore {
+  0%, 100% {
+    opacity: 0;
+    transform: translateX(0) translateY(0) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(8px) translateY(-4px) scale(1);
+  }
+}
+
+@keyframes hide-snore {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes heart-float {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.5);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px) scale(1.2);
+  }
 }
 
 @keyframes bloom {
